@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="a4fefadc93ee2610863a3c9efaba104c" extends="task" label="Medication" max_length="40" name="u_medication" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Start Date" mandatory="true" max_length="40" name="u_start_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Medication Name" mandatory="true" max_length="40" name="u_medication_name" type="string"/>
+        <element attributes="encode_utf8=false" label="Patient Id" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="End Date" mandatory="true" max_length="40" name="u_end_date" type="glide_date"/>
+        <element attributes="encode_utf8=false" label="Prescibing Doctor" mandatory="true" max_length="32" name="u_prescribing_doctor" reference="u_doctor" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Dosage" mandatory="true" max_length="1000" name="u_dosage" type="string"/>
+    </element>
+</database>

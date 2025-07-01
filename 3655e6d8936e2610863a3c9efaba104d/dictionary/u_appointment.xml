@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="1d6cb61c93ee2610863a3c9efaba10de" label="Appointment" max_length="40" name="u_appointment" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Appointment Id" max_length="40" name="u_number" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Appointment Date" mandatory="true" max_length="40" name="u_appointment_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+                <element inactive_on_update="false" label="Confirmed" sequence="0" value="confirmed"/>
+                <element inactive_on_update="false" label="Scheduled" sequence="1" value="scheduled"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Work Notes" max_length="4000" name="u_work_notes" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Department" max_length="40" name="u_department" type="string">
+            <choice>
+                <element inactive_on_update="false" label="General Medicine" sequence="0" value="general-medicine"/>
+                <element inactive_on_update="false" label="Cardiology" sequence="1" value="cardiology"/>
+                <element inactive_on_update="false" label="Pediatrics" sequence="2" value="pediatrics"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Doctor" mandatory="true" max_length="32" name="u_doctor" reference="u_doctor" type="reference"/>
+        <element attributes="encode_utf8=false" label="Patient Id" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
+        <index name="index">
+            <element name="u_doctor"/>
+        </index>
+        <index name="index2">
+            <element name="u_patient_id"/>
+        </index>
+    </element>
+</database>
