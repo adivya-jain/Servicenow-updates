@@ -1,114 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="Test Details" section_id="bd23871093226610863a3c9efaba104c" sys_domain="global" table="u_lab_test" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>number</element>
+            <element>process_flow.xml</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 12:24:24</sys_created_on>
-            <sys_id>aa9447d493226610863a3c9efaba1013</sys_id>
+            <sys_created_on>2025-07-01 19:26:15</sys_created_on>
+            <sys_id>c2252cac93e66610863a3c9efaba104c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Process Flow">faa46c2c93e66610863a3c9efaba1006</sys_ui_formatter>
+            <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:26:15</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:26:15</sys_created_on>
+            <sys_id>8a252cac93e66610863a3c9efaba104c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 12:24:24</sys_updated_on>
+            <sys_updated_on>2025-07-01 19:26:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>assigned_to</element>
-            <position>1</position>
+            <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 12:24:24</sys_created_on>
-            <sys_id>229447d493226610863a3c9efaba1014</sys_id>
+            <sys_created_on>2025-07-01 19:26:15</sys_created_on>
+            <sys_id>02252cac93e66610863a3c9efaba104d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 12:24:24</sys_updated_on>
+            <sys_updated_on>2025-07-01 19:26:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>cmdb_ci</element>
-            <position>2</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 12:24:24</sys_created_on>
-            <sys_id>a69447d493226610863a3c9efaba1014</sys_id>
+            <sys_created_on>2025-07-01 19:26:15</sys_created_on>
+            <sys_id>86252cac93e66610863a3c9efaba104d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 12:24:24</sys_updated_on>
+            <sys_updated_on>2025-07-01 19:26:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>active</element>
-            <position>3</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 12:24:24</sys_created_on>
-            <sys_id>2e9447d493226610863a3c9efaba1014</sys_id>
+            <sys_created_on>2025-07-01 19:26:15</sys_created_on>
+            <sys_id>0e252cac93e66610863a3c9efaba104d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 12:24:24</sys_updated_on>
+            <sys_updated_on>2025-07-01 19:26:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_test_type</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 12:24:24</sys_created_on>
-            <sys_id>a29447d493226610863a3c9efaba1015</sys_id>
+            <sys_created_on>2025-07-01 19:26:15</sys_created_on>
+            <sys_id>82252cac93e66610863a3c9efaba104e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 12:24:24</sys_updated_on>
+            <sys_updated_on>2025-07-01 19:26:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_status</element>
-            <position>5</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 12:24:24</sys_created_on>
-            <sys_id>ee9447d493226610863a3c9efaba1021</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 12:24:24</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.split</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 12:24:24</sys_created_on>
-            <sys_id>669447d493226610863a3c9efaba1022</sys_id>
+            <sys_created_on>2025-07-01 19:26:15</sys_created_on>
+            <sys_id>0a252cac93e66610863a3c9efaba104e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 12:24:24</sys_updated_on>
+            <sys_updated_on>2025-07-01 19:26:15</sys_updated_on>
             <sys_user/>
-            <type>.split</type>
+            <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>priority</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 12:24:24</sys_created_on>
-            <sys_id>ea9447d493226610863a3c9efaba1022</sys_id>
+            <sys_created_on>2025-07-01 19:26:15</sys_created_on>
+            <sys_id>8e252cac93e66610863a3c9efaba104e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 12:24:24</sys_updated_on>
+            <sys_updated_on>2025-07-01 19:26:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>state</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 12:24:24</sys_created_on>
-            <sys_id>629447d493226610863a3c9efaba1023</sys_id>
+            <sys_created_on>2025-07-01 19:26:15</sys_created_on>
+            <sys_id>06252cac93e66610863a3c9efaba104f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 12:24:24</sys_updated_on>
+            <sys_updated_on>2025-07-01 19:26:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -130,13 +130,13 @@
             <element>parent</element>
             <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 12:24:24</sys_created_on>
-            <sys_id>e69447d493226610863a3c9efaba1023</sys_id>
+            <sys_created_on>2025-07-01 19:26:15</sys_created_on>
+            <sys_id>8a252cac93e66610863a3c9efaba104f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 12:24:24</sys_updated_on>
+            <sys_updated_on>2025-07-01 19:26:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -144,13 +144,13 @@
             <element>u_patient_id</element>
             <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 12:24:24</sys_created_on>
-            <sys_id>6e9447d493226610863a3c9efaba1023</sys_id>
+            <sys_created_on>2025-07-01 19:26:15</sys_created_on>
+            <sys_id>02252cac93e66610863a3c9efaba1050</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 12:24:24</sys_updated_on>
+            <sys_updated_on>2025-07-01 19:26:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -158,13 +158,13 @@
             <element>u_scheduled_date</element>
             <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 12:24:24</sys_created_on>
-            <sys_id>e29447d493226610863a3c9efaba1024</sys_id>
+            <sys_created_on>2025-07-01 19:26:15</sys_created_on>
+            <sys_id>86252cac93e66610863a3c9efaba1050</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Test Details" display_value="Test Details" name="u_lab_test" sys_domain="global" view="Default view">bd23871093226610863a3c9efaba104c</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 12:24:24</sys_updated_on>
+            <sys_updated_on>2025-07-01 19:26:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

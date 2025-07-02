@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Personal Information" section_id="a6a2e4e893e66610863a3c9efaba1079" sys_domain="global" table="u_nurse" version="3" view="admin_view">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>process_flow.xml</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:15:22</sys_created_on>
+            <sys_id>e6a2e4e893e66610863a3c9efaba108c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Process Flow">0552e46893e66610863a3c9efaba1073</sys_ui_formatter>
+            <sys_ui_section caption="Personal Information" display_value="Personal Information" name="u_nurse" sys_domain="global" view="b2dc6c709f002200f45c7b9ac42e70e5">a6a2e4e893e66610863a3c9efaba1079</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:15:22</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_number</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:15:22</sys_created_on>
+            <sys_id>aea2e4e893e66610863a3c9efaba108c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Personal Information" display_value="Personal Information" name="u_nurse" sys_domain="global" view="b2dc6c709f002200f45c7b9ac42e70e5">a6a2e4e893e66610863a3c9efaba1079</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:15:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_first_name</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:15:22</sys_created_on>
+            <sys_id>26a2e4e893e66610863a3c9efaba108d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Personal Information" display_value="Personal Information" name="u_nurse" sys_domain="global" view="b2dc6c709f002200f45c7b9ac42e70e5">a6a2e4e893e66610863a3c9efaba1079</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:15:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_last_time</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:15:22</sys_created_on>
+            <sys_id>aaa2e4e893e66610863a3c9efaba108d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Personal Information" display_value="Personal Information" name="u_nurse" sys_domain="global" view="b2dc6c709f002200f45c7b9ac42e70e5">a6a2e4e893e66610863a3c9efaba1079</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:15:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_status</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:15:22</sys_created_on>
+            <sys_id>22a2e4e893e66610863a3c9efaba108e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Personal Information" display_value="Personal Information" name="u_nurse" sys_domain="global" view="b2dc6c709f002200f45c7b9ac42e70e5">a6a2e4e893e66610863a3c9efaba1079</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:15:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Personal Information</caption>
+            <header>false</header>
+            <name>u_nurse</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-01 19:15:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a6a2e4e893e66610863a3c9efaba1079</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_nurse</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+            <sys_update_name>sys_ui_section_a6a2e4e893e66610863a3c9efaba1079</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-01 19:15:22</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Admin View" name="admin_view">b2dc6c709f002200f45c7b9ac42e70e5</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

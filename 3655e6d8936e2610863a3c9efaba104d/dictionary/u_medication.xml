@@ -6,5 +6,13 @@
         <element attributes="edge_encryption_enabled=true" label="End Date" mandatory="true" max_length="40" name="u_end_date" type="glide_date"/>
         <element attributes="encode_utf8=false" label="Prescibing Doctor" mandatory="true" max_length="32" name="u_prescribing_doctor" reference="u_doctor" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Dosage" mandatory="true" max_length="1000" name="u_dosage" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Prescribed" sequence="1" value="prescribed"/>
+                <element inactive_on_update="false" label="In Progress" sequence="2" value="in progress"/>
+                <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+            </choice>
+        </element>
     </element>
 </database>
