@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.AppointmentUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>AppointmentUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AppointmentUtils = Class.create();
+AppointmentUtils.prototype = {
+    initialize: function(patientId) {
+        this.patientId = patientId;
+    },
+    getAppointmentsForPatient: function() {
+        var appointments = [];
+        var appointment = new GlideRecord('u_appointment');
+        appointment.addQuery('u_patient_id', this.patientId);
+        appointment.query();
+
+        while (appointment.next()) {
+            appointments.push({
+                number: appointment.getDisplayValue('u_number'),
+                patient: appointment.getDisplayValue('u_patient_id'),
+                date: appointment.getDisplayValue('u_appointment_date'),
+                department: appointment.getDisplayValue('u_department'),
+                status: appointment.getDisplayValue('u_status'),
+                doctor: appointment.getDisplayValue('u_doctor')
+            });
+        }
+
+        return appointments;
+    },
+
+    isAppointmentConfirmed: function(appointmentId) {
+        var appointment = new GlideRecord('u_appointment');
+        if (appointment.get(appointmentId)) {
+            return appointment.u_status.toString().toLowerCase() === 'confirmed';
+        }
+        return false;
+    },
+
+    getAppointmentById: function(appointmentId) {
+        var appointment = new GlideRecord('u_appointment');
+        if (appointment.get(appointmentId)) {
+            return {
+                number: appointment.getDisplayValue('u_number'),
+                patient: appointment.getDisplayValue('u_patient_id'),
+                date: appointment.getDisplayValue('u_appointment_date'),
+                department: appointment.getDisplayValue('u_department'),
+                status: appointment.getDisplayValue('u_status'),
+                doctor: appointment.getDisplayValue('u_doctor')
+            };
+        }
+        return null;
+    },
+
+
+    getAppointmentsByDate: function(dateStr) {
+        var results = [];
+        var appointment = new GlideRecord('u_appointment');
+
+
+        var startOfDay = new GlideDateTime(dateStr + " 00:00:00");
+        var endOfDay = new GlideDateTime(dateStr + " 23:59:59");
+
+
+        appointment.addQuery('u_appointment_date', '>=', startOfDay);
+        appointment.addQuery('u_appointment_date', '<=', endOfDay);
+        appointment.query();
+
+        while (appointment.next()) {
+            results.push({
+                number: appointment.getDisplayValue('number'),
+                patient: appointment.getDisplayValue('u_patient_id'),
+                date: appointment.getDisplayValue('u_appointment_date'),
+                department: appointment.getDisplayValue('u_department'),
+                status: appointment.getDisplayValue('u_status'),
+                doctor: appointment.getDisplayValue('u_doctor')
+            });
+        }
+        return results;
+    },
+
+    getAppointmentsByDepartment: function(departmentName) {
+        var results = [];
+        var appointment = new GlideRecord('u_appointment');
+        appointment.addQuery('u_department', departmentName);
+        appointment.query();
+
+        while (appointment.next()) {
+            results.push({
+                sys_id: appointment.getValue('sys_id'),
+                number: appointment.getDisplayValue('u_number'),
+                patient: appointment.getDisplayValue('u_patient_id'),
+                date: appointment.getDisplayValue('u_appointment_date'),
+                department: appointment.getDisplayValue('u_department'),
+                status: appointment.getDisplayValue('u_status'),
+                doctor: appointment.getDisplayValue('u_doctor')
+            });
+        }
+        return results;
+    },
+
+
+
+
+    type: 'AppointmentUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 19:38:40</sys_created_on>
+        <sys_id>c0fa28b6932a2250863a3c9efaba1009</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AppointmentUtils</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_script_include_c0fa28b6932a2250863a3c9efaba1009</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 19:38:40</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>c0fa28b6932a2250863a3c9efaba1009</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 19:38:40</sys_created_on>
+        <sys_id>c42b2036932a2250863a3c9efaba10a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 19:38:40</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

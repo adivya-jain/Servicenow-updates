@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="u_medication" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="u_medication" element="NULL" name="u_medication" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">06aa84b693662250863a3c9efaba10f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-08 17:16:48</sys_created_on>
+            <sys_id>0eaa8cbe93662250863a3c9efaba104d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-08 17:16:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_medication_name</element>
+            <list_id display_value="u_medication" element="NULL" name="u_medication" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">06aa84b693662250863a3c9efaba10f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-08 17:16:48</sys_created_on>
+            <sys_id>8eaa8cbe93662250863a3c9efaba104d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-08 17:16:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_totaldosage</element>
+            <list_id display_value="u_medication" element="NULL" name="u_medication" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">06aa84b693662250863a3c9efaba10f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-08 17:16:48</sys_created_on>
+            <sys_id>02aa8cbe93662250863a3c9efaba104e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-08 17:16:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_frequency</element>
+            <list_id display_value="u_medication" element="NULL" name="u_medication" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">06aa84b693662250863a3c9efaba10f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-08 17:16:48</sys_created_on>
+            <sys_id>82aa8cbe93662250863a3c9efaba104e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-08 17:16:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_dosage</element>
+            <list_id display_value="u_medication" element="NULL" name="u_medication" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">06aa84b693662250863a3c9efaba10f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-08 17:16:48</sys_created_on>
+            <sys_id>06aa8cbe93662250863a3c9efaba104e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-08 17:16:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>priority</element>
+            <list_id display_value="u_medication" element="NULL" name="u_medication" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">06aa84b693662250863a3c9efaba10f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-08 17:16:48</sys_created_on>
+            <sys_id>86aa8cbe93662250863a3c9efaba104e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-08 17:16:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_patient_id</element>
+            <list_id display_value="u_medication" element="NULL" name="u_medication" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">06aa84b693662250863a3c9efaba10f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-08 17:16:48</sys_created_on>
+            <sys_id>0aaa8cbe93662250863a3c9efaba104e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-08 17:16:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>state</element>
+            <list_id display_value="u_medication" element="NULL" name="u_medication" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">06aa84b693662250863a3c9efaba10f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-08 17:16:48</sys_created_on>
+            <sys_id>8aaa8cbe93662250863a3c9efaba104e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-08 17:16:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>assigned_to</element>
+            <list_id display_value="u_medication" element="NULL" name="u_medication" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">06aa84b693662250863a3c9efaba10f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-08 17:16:48</sys_created_on>
+            <sys_id>0eaa8cbe93662250863a3c9efaba104e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-08 17:16:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>short_description</element>
+            <list_id display_value="u_medication" element="NULL" name="u_medication" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">06aa84b693662250863a3c9efaba10f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-08 17:16:48</sys_created_on>
+            <sys_id>8eaa8cbe93662250863a3c9efaba104e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-08 17:16:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_class_name</element>
+            <list_id display_value="u_medication" element="NULL" name="u_medication" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">06aa84b693662250863a3c9efaba10f2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>10</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-08 17:16:48</sys_created_on>
+            <sys_id>02aa8cbe93662250863a3c9efaba104f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-08 17:16:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>u_medication</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-08 17:16:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>06aa84b693662250863a3c9efaba10f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_medication</sys_name>
+            <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+            <sys_update_name>sys_ui_list_u_medication_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-08 17:16:48</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

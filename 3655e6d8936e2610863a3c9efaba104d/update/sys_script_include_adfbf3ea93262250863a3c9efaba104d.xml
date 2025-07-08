@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.MedicationUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>MedicationUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var MedicationUtils = Class.create();
+MedicationUtils.prototype = {
+    initialize: function() {},
+
+    // a. Calculate the total dosage for a medication
+    TotalDosage: function(medicationName) {
+        var med = new GlideRecord('u_medication');
+        med.addQuery('u_medication_name', medicationName);
+        med.query();
+        if (med.next()) {
+            var dosage = parseFloat(med.getValue('u_dosage') || 0);
+            var freq = parseInt(med.getValue('u_frequency') || 0, 10);
+            return dosage * freq;
+        }
+        return null;
+    },
+
+    // b. Check if medication is available (active)
+    IsMedicationAvailable: function(medicationName) {
+        var med = new GlideRecord('u_medication');
+        med.addQuery('u_medication_name', medicationName);
+        med.query();
+        return med.next() ? med.active == true : false;
+    },
+
+    // c. Get medication details by number
+    MedDetails: function(medicationNumber) {
+        var med = new GlideRecord('u_medication');
+        med.addQuery('number', medicationNumber);
+        med.query();
+        if (med.next()) {
+            return {
+                sys_id: med.getUniqueValue(),
+                name: med.getDisplayValue('u_medication_name'),
+                dosage: med.getValue('u_dosage'),
+                frequency: med.getValue('u_frequency'),
+                isAvailable: med.active
+            };
+        }
+        return null;
+    },
+
+    // d. Get medications by patient sys_id
+    MedDetailsByPatientId: function(patientId) {
+        var results = [];
+        var med = new GlideRecord('u_medication');
+        med.addQuery('u_patient', patientId); 
+        med.query();
+        while (med.next()) {
+            results.push({
+                sys_id: med.getUniqueValue(),
+                name: med.getDisplayValue('u_medication_name'),
+                dosage: med.getValue('u_dosage'),
+                frequency: med.getValue('u_frequency'),
+                isAvailable: med.active
+            });
+        }
+        return results;
+    },
+
+    type: 'MedicationUtils'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 16:35:16</sys_created_on>
+        <sys_id>adfbf3ea93262250863a3c9efaba104d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>MedicationUtils</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_script_include_adfbf3ea93262250863a3c9efaba104d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 18:14:44</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>adfbf3ea93262250863a3c9efaba104d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 16:35:16</sys_created_on>
+        <sys_id>6921c4f693262250863a3c9efaba1086</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 16:35:16</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="1d6cb61c93ee2610863a3c9efaba10de" label="Appointment" max_length="40" name="u_appointment" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="4" label="Priority" max_length="40" name="u_priority" type="string">
+            <choice>
+                <element inactive_on_update="false" label="3-Moderate" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="1-Critical" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="4-Low" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="5-Planning" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="2-Critical" sequence="1" value="2"/>
+            </choice>
+        </element>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Appointment Id" max_length="40" name="u_number" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Appointment Date" mandatory="true" max_length="40" name="u_appointment_date" type="glide_date_time"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="u_status" type="string">
@@ -19,6 +28,7 @@
             </choice>
         </element>
         <element attributes="encode_utf8=false" label="Doctor" mandatory="true" max_length="32" name="u_doctor" reference="u_doctor" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Work List" max_length="4000" name="u_work_list" type="journal"/>
         <element attributes="encode_utf8=false" label="Patient Id" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
         <index name="index">
             <element name="u_doctor"/>
