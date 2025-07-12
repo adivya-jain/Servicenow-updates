@@ -4,9 +4,10 @@
         <element attributes="encode_utf8=false" label="Appointment Id" max_length="32" name="u_appointment_id" reference="u_appointment" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
             <choice>
-                <element inactive_on_update="false" label="Paid" sequence="1" value="paid"/>
-                <element inactive_on_update="false" label="Overdue" sequence="2" value="overdue"/>
-                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Paid" sequence="2" value="paid"/>
+                <element inactive_on_update="false" label="Overdue" sequence="3" value="overdue"/>
+                <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
             </choice>
         </element>
         <element attributes="omit_sys_original=true" label="total_amount" mandatory="true" max_length="20" name="u_currency" type="currency"/>

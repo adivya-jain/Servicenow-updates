@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="16cbe69493ae2610863a3c9efaba102b" label="Doctor" max_length="40" name="u_doctor" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive_on_update="false" label="Active" sequence="1" value="active"/>
+                <element inactive_on_update="false" label="Retired" sequence="2" value="retired"/>
+            </choice>
+        </element>
         <element label="Contact Number" max_length="255" name="u_contact_number" type="phone_number_e164"/>
         <element attributes="edge_encryption_enabled=true" label="Work Noes" max_length="4000" name="u_journal_6" type="journal"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Specialization" max_length="40" name="u_specialization" type="string">

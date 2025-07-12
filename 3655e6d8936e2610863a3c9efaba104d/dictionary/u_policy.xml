@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="2c8068ee93e2ee10863a3c9efaba105d" label="Policy" max_length="40" name="u_policy" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Policy Name" mandatory="true" max_length="40" name="u_policy_name" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Policy Number" max_length="40" name="u_number" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Policy Description" max_length="40" name="u_description" type="string"/>
+    </element>
+</database>

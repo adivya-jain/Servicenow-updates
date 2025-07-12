@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.PatientUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>PatientUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var PatientUtils = Class.create();
+PatientUtils.prototype = {
+    initialize: function(patientId) {
+        this.patientId = patientId;
+    },
+
+    PatientDetails: function() {
+        var gr = new GlideRecord("u_patient_record");
+        gr.get(this.patientId);
+        return gr;
+
+    },
+
+    isPatientVip: function() {
+        var patient = this.getPatientDetails();
+        if (patient && patient.u_isvip == true) {
+            return true;
+        }
+        return false;
+    },
+
+
+    calcAge: function() {
+        var patient = this.getPatientDetails();
+        if (!patient) {
+            return null;
+        }
+
+        var dobValue = patient.getValue('u_date_of_birth');
+        if (!dobValue) {
+            // No DOB available
+            return null;
+        }
+        var dob = new GlideDateTime(dobValue);
+        var dobInMillis = dob.getNumericValue();
+
+        var currentDate = new GlideDateTime();
+        var currentInMillis = currentDate.getNumericValue();
+
+        var diffInMillis = currentInMillis - dobInMillis;
+        var millisInYear = 1000 * 60 * 60 * 24 * 365.25;
+
+        var age = Math.floor(diffInMillis / millisInYear);
+        return age;
+    },
+
+    getAppointments: function() {
+        var appointments = [];
+        var appointmentTab = new GlideRecord('u_appointment');
+        appointmentTab.addQuery('u_patient_id', this.patientId);
+        appointmentTab.query();
+
+        while (appointmentTab.next()) {
+            appointments.push({
+                sys_id: appointmentTab.getValue('number'),
+                date: appointmentTab.getDisplayValue('u_appointment_date'),
+                doctor: appointmentTab.getDisplayValue('u_doctor'),
+                status: appointmentTab.getDisplayValue('u_status')
+            });
+        }
+
+        return appointments;
+    },
+
+
+    getMedications: function() {
+        var medications = [];
+        var medicationTab = new GlideRecord('u_medication');
+        medicationTab.addQuery('u_patient_id', this.patientId);
+        medicationTab.query();
+
+        while (medicationTab.next()) {
+            medications.push({
+                sys_id: medicationTab.getValue('number'),
+                name: medicationTab.getDisplayValue('u_medication_name'),
+                dosage: medicationTab.getDisplayValue('u_dosage'),
+                frequency: medicationTab.getDisplayValue('u_freq'),
+                startDate: medicationTab.getDisplayValue('u_start_date')
+            });
+        }
+
+        return medications;
+    },
+
+    getLabTest: function() {
+        var labTest = new GlideRecord('u_lab_test');
+        labTest.addQuery('u_number', this.patientId);
+        labTest.query();
+
+        var tests = [];
+        while (labTest.next()) {
+            tests.push({
+                sys_id: labTest.getValue('number'),
+                testType: labTest.getDisplayValue('u_test_type'),
+                result: labTest.getDisplayValue('u_result'),
+                status: labTest.getDisplayValue('u_status')
+            });
+        }
+        return tests;
+    },
+
+    getBillingRecords: function() {
+        var records = [];
+        var billing = new GlideRecord('u_billing');
+        billing.addQuery('u_patient_id', this.patientId);
+        billing.query();
+
+        while (billing.next()) {
+            records.push({
+                sys_id: billing.getValue('number'),
+                amount: billing.getDisplayValue('u_total_amount'),
+                status: billing.getDisplayValue('u_status')
+            });
+        }
+
+        return records;
+    },
+
+    getInsurancePolicies: function() {
+        var policies = [];
+        var insurance = new GlideRecord('u_insurance');
+        insurance.addQuery('u_reference_1', this.patientId);
+        insurance.query();
+
+        while (insurance.next()) {
+            policies.push({
+                sys_id: insurance.getValue('number'),
+                providerName: insurance.getDisplayValue('u_provider'),
+                status: insurance.getDisplayValue('u_status')
+            });
+        }
+
+        return policies;
+    },
+
+
+
+
+
+    type: '	PatientUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 11:54:32</sys_created_on>
+        <sys_id>b4cd7e2293222250863a3c9efaba1061</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>PatientUtils</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_script_include_b4cd7e2293222250863a3c9efaba1061</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 19:42:03</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>b4cd7e2293222250863a3c9efaba1061</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 11:54:31</sys_created_on>
+        <sys_id>c5e08b2293222250863a3c9efaba1055</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 11:54:31</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

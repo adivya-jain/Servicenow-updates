@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.InsuranceUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>InsuranceUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var InsuranceUtils = Class.create();
+InsuranceUtils.prototype = {
+    initialize: function(patientId, policyId, provider) {
+        this.patientId = patientId;
+        this.policyId = policyId;
+        this.provider = provider;
+    },
+
+    getInsuranceDetailsByPatientID: function() {
+        var grPatient = new GlideRecord('u_patient_record');
+        grPatient.addQuery('u_number', this.patientId);
+        grPatient.query();
+        if (grPatient.next()) {
+            var _patientSysId = grPatient.getUniqueValue();
+            var grInsurance = new GlideRecord('u_insurance');
+            grInsurance.addQuery('u_reference_1', _patientSysId);
+            grInsurance.query();
+            if (grInsurance.next()) {
+                var _insuranceDetails = {};
+                _insuranceDetails.patientName = grPatient.u_first_name.getDisplayValue() + " " + grPatient.u_last_name.getDisplayValue();
+                _insuranceDetails.provider = grInsurance.u_provider.getDisplayValue();
+                _insuranceDetails.policies = grInsurance.u_policies.getDisplayValue();
+                return _insuranceDetails;
+            }
+            return 'No Insrance Found';
+        }
+        return 'No Patient Found';
+    },
+
+    isPolicyActive: function() {
+        var grPolicy = new GlideRecord('u_policy');
+        grPolicy.addQuery('u_number', this.policyId);
+        grPolicy.query();
+        if (grPolicy.next()) {
+            return grPolicy.u_active;
+        }
+        return 'No Policy Found';
+    },
+
+    getInsurancePolicyById: function() {
+        if (!this.policyId) return 'Policy ID is required';
+        var grPolicy = new GlideRecord('u_policy');
+        grPolicy.addQuery('u_number', this.policyId);
+        grPolicy.query();
+        if (grPolicy.next()) {
+            return {
+                sys_id: grPolicy.getUniqueValue(),
+                number: grPolicy.u_number.toString(),
+                name: grPolicy.u_policy_name.toString(),
+                description: grPolicy.u_pd.toString(),
+                is_active: grPolicy.u_active == true
+            };
+        }
+        return 'No Policy Found';
+    },
+
+    getInsurancePoliciesByProvider: function() {
+        var results = [];
+        if (!this.provider) return results;
+        var gr = new GlideRecord('u_insurance');
+        gr.addQuery('u_provider', this.provider);
+        gr.query();
+        while (gr.next()) {
+            results.push({
+                sys_id: gr.getUniqueValue(),
+                number: gr.number.toString(),
+                patient_id: gr.u_reference_1.toString(),
+                provider: gr.u_provider.toString(),
+                policies: gr.u_policies.toString(),
+                coverage_details: gr.u_coverage_datails.toString(),
+                status: gr.u_statuts.toString(),
+                urgency: gr.urgency.toString(),
+                priority: gr.priority.toString(),
+                state: gr.state.toString(),
+                assigned_to: gr.assigned_to.toString()
+            });
+        }
+        return results;
+    },
+
+    type: 'InsuranceUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 19:37:29</sys_created_on>
+        <sys_id>a6e8ecbe93e62250863a3c9efaba10df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>InsuranceUtils</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_script_include_a6e8ecbe93e62250863a3c9efaba10df</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 19:37:29</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>a6e8ecbe93e62250863a3c9efaba10df</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 19:37:29</sys_created_on>
+        <sys_id>7eda64fe93e62250863a3c9efaba106a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 19:37:29</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

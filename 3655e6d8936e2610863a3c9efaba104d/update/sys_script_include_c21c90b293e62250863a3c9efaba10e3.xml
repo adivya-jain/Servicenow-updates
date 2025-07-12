@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.LabTestUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>LabTestUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var LabTestUtils = Class.create();
+LabTestUtils.prototype = {
+    initialize: function() {},
+
+    getLabTestResults: function(testId) {
+        var gr = new GlideRecord('u_lab_test');
+        gr.addQuery('number', testId);
+        gr.query();
+        return gr.next() ? gr.getDisplayValue('u_results') : null;
+    },
+
+    checkLabTestResultsReady: function(testId) {
+        var gr = new GlideRecord('u_lab_test');
+        gr.addQuery('number', testId);
+        gr.query();
+        return gr.next() ? !gs.nil(gr.u_results) && gr.u_status == 'completed' : 'Lab Test Not Found';
+    },
+
+    getLabTestsByPatientId: function(patientId) {
+        var pr = new GlideRecord('u_patient_record');
+        pr.addQuery('u_number', patientId);
+        pr.query();
+        if (!pr.next()) return 'Patient not found';
+
+        var gr = new GlideRecord('u_lab_test');
+        gr.addQuery('u_patient_id', pr.getUniqueValue());
+        gr.query();
+        var list = [];
+        while (gr.next()) list.push(gr.getDisplayValue('number'));
+        return list.length > 0 ? list : 'No Lab Tests Found';
+    },
+
+    getLabTestsByDate: function(dateStr) {
+        var gr = new GlideRecord('u_lab_test');
+        gr.addQuery('u_scheduled_date', 'STARTSWITH', dateStr);
+        gr.query();
+        var list = [];
+        while (gr.next()) list.push(gr.getDisplayValue('number'));
+        return list.length > 0 ? list : 'No Lab Tests Found for this date';
+    },
+
+    type: 'LabTestUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 19:09:27</sys_created_on>
+        <sys_id>c21c90b293e62250863a3c9efaba10e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LabTestUtils</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_script_include_c21c90b293e62250863a3c9efaba10e3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 19:09:27</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>c21c90b293e62250863a3c9efaba10e3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-08 19:09:26</sys_created_on>
+        <sys_id>c47428f293e62250863a3c9efaba10a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-08 19:09:26</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

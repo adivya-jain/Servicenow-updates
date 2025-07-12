@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="aa4e811d93666a10863a3c9efaba1063" label="NUMBER TABLE" max_length="40" name="u_number_table" type="collection">
+        <element label="New Integer" max_length="40" name="u_integer_1" type="integer"/>
+    </element>
+</database>
