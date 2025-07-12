@@ -18,8 +18,8 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>After Appointment Scheduled</name>
-        <order>100</order>
+        <name>New VIP patient scheduled</name>
+        <order>150</order>
         <priority>100</priority>
         <rest_method/>
         <rest_method_text/>
@@ -28,44 +28,50 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	var gr = new GlideRecord("u_doctor");
-	gr.get(current.u_doctor);
 
-	if (current.u_doctor) {
-        gs.addInfoMessage(`Appointment Scheduled for Doctor ${gr.u_first_name}`);
-		gs.eventQueue("notify.appointment.schedule.patient",current,null,null);
-    } else {
-        gs.addInfoMessage('Appointment Scheduled (Doctor not specified).');
-    }
+	// Add your code here
+	var patId = current.u_patient_id;
+	var gr = new GlideRecord("u_patient_record");
+	gr.addQuery("sys_id",patId);
+	gr.query(); 
+	gr.next();
+	if(gr.u_vip == true)
+	{
+		//event trigger krodo
+		gs.addInfoMessage("Email Sent");
+		gs.eventQueue('notify.healthcare.staffs.patient.vip.add',current,null,null);
+	}
+// notify.healthcare.staffs.patient.vip.add
+	
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-07-07 10:15:44</sys_created_on>
+        <sys_created_on>2025-07-09 15:03:56</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>de7e959e9326ae10863a3c9efaba109f</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>After Appointment Scheduled</sys_name>
+        <sys_id>9c7f60c7932e6250863a3c9efaba10d2</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>New VIP patient scheduled</sys_name>
         <sys_overrides/>
         <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
-        <sys_update_name>sys_script_de7e959e9326ae10863a3c9efaba109f</sys_update_name>
+        <sys_update_name>sys_script_9c7f60c7932e6250863a3c9efaba10d2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-09 11:25:55</sys_updated_on>
+        <sys_updated_on>2025-07-09 17:17:24</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=de7e959e9326ae10863a3c9efaba109f"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=9c7f60c7932e6250863a3c9efaba10d2"/>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
-        <id>de7e959e9326ae10863a3c9efaba109f</id>
+        <id>9c7f60c7932e6250863a3c9efaba10d2</id>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-07-07 10:15:43</sys_created_on>
-        <sys_id>c0b0e9529366ae10863a3c9efaba10e1</sys_id>
+        <sys_created_on>2025-07-09 15:03:55</sys_created_on>
+        <sys_id>ddd530c7932e6250863a3c9efaba109a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-07 10:15:43</sys_updated_on>
+        <sys_updated_on>2025-07-09 15:03:55</sys_updated_on>
         <table>sys_script</table>
         <use_es_latest>true</use_es_latest>
     </sys_es_latest_script>

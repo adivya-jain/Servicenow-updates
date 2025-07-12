@@ -12,56 +12,47 @@
         <script><![CDATA[var BillingUtils = Class.create();
 BillingUtils.prototype = {
     initialize: function(patID) {
-		this.patID = patID;
-		// this.patGR = new GlideRecord('u_billing')
+        this.patID = patID;
+        // this.patGR = new GlideRecord('u_billing')
     },
-	totalAmt : function()
-	{
-		var patGR = new GlideRecord('u_billing');
-		patGR.addQuery('u_patient_id',this.patID);
-		patGR.query();
-		var a = 0;
-		while(patGR.next())
-		{
-			// a=parseInt(patGR.getDisplayValue('u_total_amount'))+a
-			a += parseFloat(patGR.u_total_amount.getValue());
-		}
-		return a;
-	},
-	isOverdue: function(bID)
-	{
-		var patGR = new GlideRecord('u_billing')
-		patGR.addQuery('sys_id',bID)
-		patGR.query()
-		if(patGR.next())
-		{
+    totalAmt: function() {
+        var patGR = new GlideRecord('u_billing');
+        patGR.addQuery('u_patient_id', this.patID);
+        patGR.query();
+        var a = 0;
+        while (patGR.next()) {
+            // a=parseInt(patGR.getDisplayValue('u_total_amount'))+a
+            a += parseFloat(patGR.u_total_amount.getValue());
+        }
+        return a;
+    },
+    isOverdue: function(bID) {
+        var patGR = new GlideRecord('u_billing');
+        patGR.addQuery('sys_id', bID);
+        patGR.query();
+        if (patGR.next()) {
 
-		if(patGR.u_status=='overdue')
-		{
-			return true
-		}
-		else
-		{
-			return false
-		}
-		}
-		
-	},
+            if (patGR.u_status == 'overdue') {
+                return true;
+            } else {
+                return false;
+            }
+        }
 
-	billingDetails : function(sr_number)
-	{
-		var patGR = new GlideRecord('u_billing')
-		patGR.addQuery('number',sr_number)
-		patGR.query()
-		if(patGR.next())
-		{
-			return {
-				"total":patGR.u_total_amount.getDisplayValue(),
-				"status": patGR.u_status.getDisplayValue(),
-			}
-		}
-	},
-	getBillingRecordsByPatientID: function() {
+    },
+
+    billingDetails: function(sr_number) {
+        var patGR = new GlideRecord('u_billing');
+        patGR.addQuery('number', sr_number);
+        patGR.query();
+        if (patGR.next()) {
+            return {
+                "total": patGR.u_total_amount.getDisplayValue(),
+                "status": patGR.u_status.getDisplayValue(),
+            }
+        }
+    },
+    getBillingRecordsByPatientID: function() {
         var billingRecords = [];
         var patGR = new GlideRecord('u_billing');
         patGR.addQuery('u_patient_id', this.patID);
@@ -86,14 +77,14 @@ BillingUtils.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-07-08 19:25:52</sys_created_on>
         <sys_id>4db5e8be93e62250863a3c9efaba106d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>BillingUtils</sys_name>
         <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
         <sys_update_name>sys_script_include_4db5e8be93e62250863a3c9efaba106d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-08 19:25:52</sys_updated_on>
+        <sys_updated_on>2025-07-08 20:15:44</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>4db5e8be93e62250863a3c9efaba106d</id>

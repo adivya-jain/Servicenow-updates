@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <derived_priority>200</derived_priority>
+        <description>Sending Emails to Billing Department</description>
+        <event_name>emails.to.billing.department</event_name>
+        <fired_by>Business Rule - After Appointment is Completed </fired_by>
+        <priority>200</priority>
+        <queue/>
+        <suffix/>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-09 18:24:42</sys_created_on>
+        <sys_id>6a73210b9322a250863a3c9efaba1079</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>emails.to.billing.department</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sysevent_register_6a73210b9322a250863a3c9efaba1079</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-09 18:24:42</sys_updated_on>
+        <table>u_appointment</table>
+    </sysevent_register>
+</record_update>

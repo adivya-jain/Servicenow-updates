@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <derived_priority>100</derived_priority>
+        <description>Email to Healthcare Staff when VIP patient is added</description>
+        <event_name>notify.healthcare.staffs.patient.vip.add</event_name>
+        <fired_by>Bussiness Rule - New VIP patient scheduled</fired_by>
+        <priority>100</priority>
+        <queue/>
+        <suffix/>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-09 15:01:29</sys_created_on>
+        <sys_id>1794384f932e6250863a3c9efaba10e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>notify.healthcare.staffs.patient.vip.add</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sysevent_register_1794384f932e6250863a3c9efaba10e1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-09 15:01:29</sys_updated_on>
+        <table>u_appointment</table>
+    </sysevent_register>
+</record_update>
