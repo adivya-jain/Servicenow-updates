@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>u_status</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 13:20:41</sys_created_on>
+        <sys_id>c8a753349376ea50863a3c9efaba10b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_status</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_ui_policy_action_c8a753349376ea50863a3c9efaba10b9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-15 13:20:41</sys_updated_on>
+        <table>u_appointment</table>
+        <ui_policy display_value="Restrict editing of the appointment_date field to users with the healthcare_admin role">8193d33c9336ea50863a3c9efaba10aa</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=c8a753349376ea50863a3c9efaba10b9"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</application>
+        <file_path/>
+        <instance_id>4f2a6c99fbe86a581feef633beefdc0f</instance_id>
+        <instance_name>dev311363</instance_name>
+        <name>sys_ui_policy_action_c8a753349376ea50863a3c9efaba10b9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>u_status</field><field_message/><field_message_type>none</field_message_type><mandatory>true</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-15 13:20:41</sys_created_on><sys_id>c8a753349376ea50863a3c9efaba10b9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_status</sys_name><sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package><sys_policy/><sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope><sys_update_name>sys_ui_policy_action_c8a753349376ea50863a3c9efaba10b9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-15 13:20:41</sys_updated_on><table>u_appointment</table><ui_policy display_value="Restrict editing of the appointment_date field to users with the healthcare_admin role">8193d33c9336ea50863a3c9efaba10aa</ui_policy><value/><value_action>ignore</value_action><visible>ignore</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=c8a753349376ea50863a3c9efaba10b9"/></record_update>]]></payload>
+        <payload_hash>1343177754</payload_hash>
+        <record_name>u_status</record_name>
+        <reverted_from/>
+        <source>7067aa1093ae2610863a3c9efaba10ba</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 13:20:41</sys_created_on>
+        <sys_id>e7b7dfb09376ea50863a3c9efaba10e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1980e3e9fd50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-15 13:20:41</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>ebb7dfb04b76ea50fdadbddeefd9cbe4</update_guid>
+        <update_guid_history>ebb7dfb04b76ea50fdadbddeefd9cbe4:1343177754</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 13:21:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>6cb51c71874a4df8b0ef70998d13c141</sys_id>
+        <sys_metadata>c8a753349376ea50863a3c9efaba10b9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_status</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_parent display_value="Restrict editing of the appointment_date field to users with the healthcare_admin role">8193d33c9336ea50863a3c9efaba10aa</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_scope_delete display_value="">1a9e9d134e794dd889d12b6243941a40</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_c8a753349376ea50863a3c9efaba10b9</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_c8a753349376ea50863a3c9efaba10b9">e7b7dfb09376ea50863a3c9efaba10e5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-15 13:21:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

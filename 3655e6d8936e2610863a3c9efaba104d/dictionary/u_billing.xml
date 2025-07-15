@@ -2,7 +2,7 @@
     <element audit="true" db_object_id="d2587e9493ee2610863a3c9efaba10c3" extends="task" label="Billing" max_length="40" name="u_billing" type="collection">
         <element attributes="encode_utf8=false" label="Patient Id" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
         <element attributes="encode_utf8=false" label="Appointment Id" max_length="32" name="u_appointment_id" reference="u_appointment" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
+        <element attributes="edge_encryption_enabled=true, audit=true" choice="1" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
             <choice>
                 <element inactive_on_update="false" label="Paid" sequence="2" value="paid"/>
                 <element inactive_on_update="false" label="Overdue" sequence="3" value="overdue"/>
@@ -10,6 +10,6 @@
                 <element inactive_on_update="false" label="New" sequence="0" value="new"/>
             </choice>
         </element>
-        <element attributes="omit_sys_original=true" label="total_amount" mandatory="true" max_length="20" name="u_currency" type="currency"/>
+        <element attributes="omit_sys_original=true, audit=true" label="total_amount" mandatory="true" max_length="20" name="u_currency" type="currency"/>
     </element>
 </database>

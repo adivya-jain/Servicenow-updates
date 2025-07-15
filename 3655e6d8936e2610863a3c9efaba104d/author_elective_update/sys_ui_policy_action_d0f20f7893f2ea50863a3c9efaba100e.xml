@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>u_results</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 11:50:50</sys_created_on>
+        <sys_id>d0f20f7893f2ea50863a3c9efaba100e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_results</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_ui_policy_action_d0f20f7893f2ea50863a3c9efaba100e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-15 11:50:50</sys_updated_on>
+        <table>u_lab_test</table>
+        <ui_policy display_value="hide the results field when the status is &quot;Scheduled&quot;">b3c247b493f2ea50863a3c9efaba10b6</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=d0f20f7893f2ea50863a3c9efaba100e"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</application>
+        <file_path/>
+        <instance_id>4f2a6c99fbe86a581feef633beefdc0f</instance_id>
+        <instance_name>dev311363</instance_name>
+        <name>sys_ui_policy_action_d0f20f7893f2ea50863a3c9efaba100e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>u_results</field><field_message/><field_message_type>none</field_message_type><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-15 11:50:50</sys_created_on><sys_id>d0f20f7893f2ea50863a3c9efaba100e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_results</sys_name><sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package><sys_policy/><sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope><sys_update_name>sys_ui_policy_action_d0f20f7893f2ea50863a3c9efaba100e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-15 11:50:50</sys_updated_on><table>u_lab_test</table><ui_policy display_value="hide the results field when the status is &quot;Scheduled&quot;">b3c247b493f2ea50863a3c9efaba10b6</ui_policy><value/><value_action>ignore</value_action><visible>false</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=d0f20f7893f2ea50863a3c9efaba100e"/></record_update>]]></payload>
+        <payload_hash>-358485296</payload_hash>
+        <record_name>u_results</record_name>
+        <reverted_from/>
+        <source>7067aa1093ae2610863a3c9efaba10ba</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 11:50:50</sys_created_on>
+        <sys_id>db23c3b493f2ea50863a3c9efaba1021</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1980dec5c910000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-15 11:50:50</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>df23c3b4ccf2ea5015f8f82eeb6b4b20</update_guid>
+        <update_guid_history>df23c3b4ccf2ea5015f8f82eeb6b4b20:-358485296</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 11:52:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>29f6fc5509f944939c79e9e0dde5b401</sys_id>
+        <sys_metadata>d0f20f7893f2ea50863a3c9efaba100e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_results</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_scope_delete display_value="">1a9e9d134e794dd889d12b6243941a40</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_d0f20f7893f2ea50863a3c9efaba100e</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_d0f20f7893f2ea50863a3c9efaba100e">db23c3b493f2ea50863a3c9efaba1021</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-15 11:52:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

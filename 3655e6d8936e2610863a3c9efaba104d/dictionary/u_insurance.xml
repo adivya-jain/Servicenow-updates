@@ -8,7 +8,7 @@
             </choice>
         </element>
         <element attributes="encode_utf8=false" label="Patient Id" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" label="Coverage Details" max_length="40" name="u_coverage_details" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true, audit=true" label="Coverage Details" max_length="40" name="u_coverage_details" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Policy Number" mandatory="true" max_length="40" name="u_policy_number" type="string"/>
         <element attributes="array=denormalized,no_sort=true,slushbucket_ref_no_expand=true" label="Policies" max_length="1024" name="u_policies" reference="u_policy" type="glide_list"/>
         <element attributes="edge_encryption_enabled=true" label="Provider" mandatory="true" max_length="40" name="u_provider" type="string"/>

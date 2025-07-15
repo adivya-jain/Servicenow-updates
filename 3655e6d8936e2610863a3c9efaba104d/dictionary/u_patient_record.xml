@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="email_client=true" audit="true" db_object_id="013a661493ae2610863a3c9efaba1059" label="Patient" max_length="40" name="u_patient_record" type="collection">
+    <element attributes="email_client=true,audit_type=whitelist" audit="true" db_object_id="013a661493ae2610863a3c9efaba1059" label="Patient" max_length="40" name="u_patient_record" type="collection">
         <element label="Active" max_length="40" name="u_active" type="boolean"/>
         <element label="VIP" max_length="40" name="u_vip" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="Information" max_length="40" name="u_information" type="string"/>

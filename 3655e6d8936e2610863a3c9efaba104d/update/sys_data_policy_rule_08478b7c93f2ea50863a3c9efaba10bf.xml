@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>u_contact_number</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 12:09:24</sys_created_on>
+        <sys_data_policy display_value="contact_number field is mandatory for all patient records">4385c37c93f2ea50863a3c9efaba102f</sys_data_policy>
+        <sys_id>08478b7c93f2ea50863a3c9efaba10bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_contact_number</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_data_policy_rule_08478b7c93f2ea50863a3c9efaba10bf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-15 12:09:24</sys_updated_on>
+        <table>u_patient_record</table>
+    </sys_data_policy_rule>
+</record_update>
