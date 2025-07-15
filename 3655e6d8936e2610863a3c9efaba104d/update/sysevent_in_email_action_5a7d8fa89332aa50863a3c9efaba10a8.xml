@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_in_email_action">
+    <sysevent_in_email_action action="INSERT_OR_UPDATE">
+        <action>record_action</action>
+        <active>true</active>
+        <assignment_operator/>
+        <condition_script/>
+        <description/>
+        <event_name>email.read</event_name>
+        <filter_condition table="sys_email">subjectLIKEUpdate Contact^EQ<item endquery="false" field="subject" goto="false" newquery="false" operator="LIKE" or="false" value="Update Contact"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <from/>
+        <name>Update Patient Contact Type Reply</name>
+        <order>-11</order>
+        <reply_email/>
+        <required_roles/>
+        <script><![CDATA[(function runAction(current, event, email, logger, classifier) {
+    var body = email.body_text || email.body || '';
+    var lines = body.split('\n');
+
+    var patId = null;
+    var newPhone = null;
+    var newEmail = null;
+
+    for (var i = 0; i < lines.length; i++) {
+        var line = lines[i].trim().toLowerCase();
+
+        if (line.startsWith('patid')) {
+            var parts = lines[i].split(':');
+            if (parts.length > 1) {
+                patId = parts[1].trim();
+            }
+        }
+
+        if (line.startsWith('phone') || line.startsWith('contact')) {
+            var parts = lines[i].split(':');
+            if (parts.length > 1) {
+                newPhone = parts[1].trim();
+            }
+        }
+
+        if (line.startsWith('email')) {
+            var parts = lines[i].split(':');
+            if (parts.length > 1) {
+                newEmail = parts[1].trim();
+            }
+        }
+    }
+
+    if (patId) {
+        var patient = new GlideRecord('u_patient_record');
+        if (patient.get(patId)) {
+            if (newPhone) {
+                patient.u_contact_number = newPhone;
+            }
+            if (newEmail) {
+                patient.u_email = newEmail;
+            }
+            patient.update();
+            logger.log("Updated contact info for patient ID: " + patId);
+        } else {
+            logger.log("No patient found with ID: " + patId);
+        }
+    } else {
+        logger.log("No PatID found in the email.");
+    }
+
+})(current, event, email, logger, classifier);
+]]></script>
+        <stop_processing>true</stop_processing>
+        <sys_class_name>sysevent_in_email_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-14 19:35:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5a7d8fa89332aa50863a3c9efaba10a8</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Update Patient Contact Type Reply</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sysevent_in_email_action_5a7d8fa89332aa50863a3c9efaba10a8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-14 20:10:18</sys_updated_on>
+        <table>u_patient_record</table>
+        <template/>
+        <type>new</type>
+    </sysevent_in_email_action>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>5a7d8fa89332aa50863a3c9efaba10a8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-14 19:35:09</sys_created_on>
+        <sys_id>0fd363a493b2aa50863a3c9efaba1035</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-14 19:35:09</sys_updated_on>
+        <table>sysevent_in_email_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
