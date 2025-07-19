@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.UpdateInsuranceRecord</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>UpdateInsuranceRecord</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var UpdateInsuranceRecord = Class.create();
+UpdateInsuranceRecord.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	updateKrdo:function()
+	{
+		var insuId = this.getParameter("sysparm_id");
+		var status = this.getParameter("sysparm_status");
+		var isactive = this.getParameter("sysparm_dactive");
+		var patient = this.getParameter("sysparm_patient");
+		gs.addInfoMessage("Reached here");
+		var gr = new GlideRecord("u_insurance");
+		gr.addQuery("sys_id", insuId);
+		gr.query();
+		if (gr.next()) {
+			if(gr.u_status != status){
+			gr.u_status = status;
+			}
+			if(gr.active != isactive)
+			{
+				gr.active = isactive;
+			}
+			if(gr.u_patient_id != patient)
+			{
+				gr.u_patient_id = patient;
+			}
+			gr.update();
+			// gs.eventQueue("")
+			return true;
+		}
+		return false;
+	},
+
+    type: 'UpdateInsuranceRecord'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-18 05:30:53</sys_created_on>
+        <sys_id>bae2c139933aee50863a3c9efaba1086</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>UpdateInsuranceRecord</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_script_include_bae2c139933aee50863a3c9efaba1086</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-18 05:50:44</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>bae2c139933aee50863a3c9efaba1086</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-18 05:30:53</sys_created_on>
+        <sys_id>7ef809fd933aee50863a3c9efaba109e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-18 05:30:53</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.RefillMedication</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>RefillMedication</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var RefillMedication = Class.create();
+RefillMedication.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    refillmedi: function() {
+        var mediId = this.getParameter("sysparm_id");
+        var gr = new GlideRecord("u_medication");
+
+        if (gr.get(mediId)) {
+            var newMedi = new GlideRecord("u_medication");
+            newMedi.initialize();
+
+            newMedi.u_medication_name = gr.u_medication_name;
+            newMedi.u_patient_id = gr.u_patient_id;
+            newMedi.u_dosage = gr.u_dosage;
+            newMedi.u_frequency = gr.u_frequency;
+            newMedi.u_start_date = gr.u_start_date;
+            newMedi.u_end_date = gr.u_end_date;
+
+            newMedi.insert();
+            return "true";
+        }
+
+        return "false";
+    },
+
+    type: 'RefillMedication'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-17 19:43:38</sys_created_on>
+        <sys_id>a9ef722993beae50863a3c9efaba1024</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>RefillMedication</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_script_include_a9ef722993beae50863a3c9efaba1024</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-17 19:52:40</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>a9ef722993beae50863a3c9efaba1024</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-17 19:43:37</sys_created_on>
+        <sys_id>e89203e593beae50863a3c9efaba10c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-17 19:43:37</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

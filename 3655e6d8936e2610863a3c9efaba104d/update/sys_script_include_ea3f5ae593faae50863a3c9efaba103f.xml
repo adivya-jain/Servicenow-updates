@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.RescheduleAppointment</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Reschedule appointment of patient</description>
+        <mobile_callable>false</mobile_callable>
+        <name>RescheduleAppointment</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var RescheduleAppointment = Class.create();
+RescheduleAppointment.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	rescheduleAppointment: function() {
+        var sysId = this.getParameter('sysparm_sys_id');
+        var newDate = this.getParameter('sysparm_new_date');
+
+        var gr = new GlideRecord('u_appointment');
+        if (gr.get(sysId)) {
+            gr.u_appointment_date = newDate;
+            gr.update();
+
+            gs.eventQueue('appointment.rescheduled', gr, gr.patient, newDate);
+
+            return 'success';
+        }
+
+        return 'fail';
+    },
+
+    type: 'RescheduleAppointment'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-17 17:10:32</sys_created_on>
+        <sys_id>ea3f5ae593faae50863a3c9efaba103f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RescheduleAppointment</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_script_include_ea3f5ae593faae50863a3c9efaba103f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-17 17:10:32</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>ea3f5ae593faae50863a3c9efaba103f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-17 17:10:32</sys_created_on>
+        <sys_id>f98f96ad93faae50863a3c9efaba10ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-17 17:10:32</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

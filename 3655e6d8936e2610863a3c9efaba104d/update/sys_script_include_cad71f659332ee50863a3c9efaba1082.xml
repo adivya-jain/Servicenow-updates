@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.DischargePatient</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>DischargePatient</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var DischargePatient = Class.create();
+DischargePatient.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    discharge: function() {
+        var patId = this.getParameter("sysparm_id");
+        var gr = new GlideRecord("u_patient_record");
+        gr.addQuery("sys_id", patId);
+        gr.query();
+        if (gr.next()) {
+            var roomid = gr.u_allot_room;
+            var grRoom = new GlideRecord("u_room");
+            grRoom.addQuery("sys_id", roomid);
+            grRoom.query();
+            if (grRoom.next()) {
+                if (grRoom.u_occupied_beds > 0) {
+                    grRoom.u_occupied_beds -= 1;
+                    if (grRoom.u_occupied_beds == 0) {
+                        var grWard = new GlideRecord("u_ward");
+                        grWard.addQuery("sys_id", grRoom.u_ward_id);
+                        grWard.query();
+                        if (grWard.next()) {
+                            grWard.u_occupancy -= 1;
+                            grWard.update();
+                        }
+
+                    }
+                    grRoom.update();
+                    gr.u_allot_room = null;
+					gr.update();
+                }
+
+                return true;
+            }
+
+        }
+        return false;
+
+
+    },
+    type: 'DischargePatient'
+
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-17 21:27:45</sys_created_on>
+        <sys_id>cad71f659332ee50863a3c9efaba1082</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>DischargePatient</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_script_include_cad71f659332ee50863a3c9efaba1082</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-17 21:54:11</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>cad71f659332ee50863a3c9efaba1082</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-17 21:27:44</sys_created_on>
+        <sys_id>6d6a1fe993feae50863a3c9efaba10d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-17 21:27:44</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

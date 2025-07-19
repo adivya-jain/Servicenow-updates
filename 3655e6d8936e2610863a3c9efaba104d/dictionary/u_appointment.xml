@@ -30,6 +30,7 @@
         <element attributes="encode_utf8=false" label="Doctor" mandatory="true" max_length="32" name="u_doctor" reference="u_doctor" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Work List" max_length="4000" name="u_work_list" type="journal"/>
         <element attributes="encode_utf8=false" label="Patient Id" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
+        <element attributes="array=denormalized,no_sort=true,slushbucket_ref_no_expand=true" label="Test List User" max_length="1024" name="u_user_list" reference="sys_user" type="glide_list"/>
         <index name="index">
             <element name="u_doctor"/>
         </index>
