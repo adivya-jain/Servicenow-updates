@@ -19,7 +19,7 @@
         <element attributes="edge_encryption_enabled=true" label="First Name" mandatory="true" max_length="40" name="u_first_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Last Name" mandatory="true" max_length="40" name="u_last_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Office Location" mandatory="true" max_length="40" name="u_office_location" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Email" mandatory="true" max_length="40" name="u_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Email" mandatory="true" max_length="40" name="u_email" type="string" unique="true"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="u_number" read_only="true" type="string"/>
         <index name="index" unique="true">
             <element name="u_email"/>

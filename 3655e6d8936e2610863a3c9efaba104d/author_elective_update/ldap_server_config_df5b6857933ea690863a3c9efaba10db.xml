@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ldap_server_config">
+    <ldap_server_config action="DELETE">
+        <active>true</active>
+        <attributes/>
+        <authenticate>true</authenticate>
+        <connect_timeout>10</connect_timeout>
+        <dn/>
+        <dn_field/>
+        <listen_interval>5</listen_interval>
+        <listener>false</listener>
+        <map/>
+        <mid_server/>
+        <name>Demo LDAP integration</name>
+        <paging>true</paging>
+        <password/>
+        <rdn>dc=example,dc=com</rdn>
+        <read_timeout>30</read_timeout>
+        <server_url>ldap://ldap.forumsys.com</server_url>
+        <ssl>false</ssl>
+        <sys_class_name>ldap_server_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-22 19:13:00</sys_created_on>
+        <sys_id>df5b6857933ea690863a3c9efaba10db</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Demo LDAP integration</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>ldap_server_config_df5b6857933ea690863a3c9efaba10db</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-22 19:13:00</sys_updated_on>
+        <system_id>app128015.ord191.service-now.com:dev311363001</system_id>
+        <vendor>other</vendor>
+    </ldap_server_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</application>
+        <file_path/>
+        <instance_id>4f2a6c99fbe86a581feef633beefdc0f</instance_id>
+        <instance_name>dev311363</instance_name>
+        <name>ldap_server_config_df5b6857933ea690863a3c9efaba10db</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ldap_server_config"><ldap_server_config action="INSERT_OR_UPDATE"><active>true</active><attributes/><authenticate>true</authenticate><connect_timeout>10</connect_timeout><dn/><dn_field/><listen_interval>5</listen_interval><listener>false</listener><map/><mid_server/><name>Demo LDAP integration</name><paging>true</paging><password/><rdn>dc=example,dc=com</rdn><read_timeout>30</read_timeout><server_url>ldap://ldap.forumsys.com</server_url><ssl>false</ssl><sys_class_name>ldap_server_config</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-22 19:13:00</sys_created_on><sys_id>df5b6857933ea690863a3c9efaba10db</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Demo LDAP integration</sys_name><sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package><sys_policy/><sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope><sys_update_name>ldap_server_config_df5b6857933ea690863a3c9efaba10db</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-22 19:13:00</sys_updated_on><system_id>app128015.ord191.service-now.com:dev311363001</system_id><vendor>other</vendor></ldap_server_config></record_update>]]></payload>
+        <payload_hash>-1190902312</payload_hash>
+        <record_name>Demo LDAP integration</record_name>
+        <reverted_from/>
+        <source>7dc3b71393122210863a3c9efaba10bb</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2025-06-28 13:16:35</sys_created_on>
+        <sys_id>8b8b6097933ea690863a3c9efaba10be</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>197b6aebf380000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>LDAP Server</type>
+        <update_guid>4b8b6097133ea6903ad5fa40669539be</update_guid>
+        <update_guid_history>4b8b6097133ea6903ad5fa40669539be:-1190902312</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Demo LDAP integration">538b6097933ea690863a3c9efaba10bf</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-22 19:13:10</sys_created_on>
+        <sys_db_object display_value="" name="ldap_server_config">ldap_server_config</sys_db_object>
+        <sys_id>8c7f1fd171e74beeb4be5ad0ec823844</sys_id>
+        <sys_metadata>df5b6857933ea690863a3c9efaba10db</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Demo LDAP integration</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_scope_delete display_value="">1a9e9d134e794dd889d12b6243941a40</sys_scope_delete>
+        <sys_update_name>ldap_server_config_df5b6857933ea690863a3c9efaba10db</sys_update_name>
+        <sys_update_version display_value="ldap_server_config_df5b6857933ea690863a3c9efaba10db">8b8b6097933ea690863a3c9efaba10be</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-22 19:13:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.UserDepartment</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>UserDepartment</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var UserDepartment = Class.create();
+UserDepartment.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	getDepart: function()
+	{
+		var userId = this.getParameter("sysparm_id");
+		var ga = new GlideRecord("sys_user");
+		var dep = new GlideRecord("cmn_department");
+		if(ga.get(userId))
+		{
+			var depsys = ga.getValue("department");
+			
+			if(dep.get(depsys))
+			{
+				return dep.getValue("name");
+			}
+		}
+		return false;
+	},
+
+    type: 'UserDepartment'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-20 11:11:12</sys_created_on>
+        <sys_id>0839e8269372e290863a3c9efaba1025</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>UserDepartment</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_script_include_0839e8269372e290863a3c9efaba1025</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-20 11:15:12</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>0839e8269372e290863a3c9efaba1025</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-20 11:11:12</sys_created_on>
+        <sys_id>6b0a28269372e290863a3c9efaba10c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-20 11:11:12</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
