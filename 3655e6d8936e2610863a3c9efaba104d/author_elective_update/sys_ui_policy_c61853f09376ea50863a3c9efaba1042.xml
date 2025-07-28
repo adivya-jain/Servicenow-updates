@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="DELETE">
+        <active>true</active>
+        <conditions/>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>101</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>testing</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 13:22:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c61853f09376ea50863a3c9efaba1042</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>testing</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_ui_policy_c61853f09376ea50863a3c9efaba1042</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-15 13:22:33</sys_updated_on>
+        <table>u_appointment</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</application>
+        <file_path/>
+        <instance_id>4f2a6c99fbe86a581feef633beefdc0f</instance_id>
+        <instance_name>dev311363</instance_name>
+        <name>sys_ui_policy_c61853f09376ea50863a3c9efaba1042</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;&lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;conditions/&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;101&lt;/order&gt;&lt;reverse_if_false&gt;true&lt;/reverse_if_false&gt;&lt;run_scripts&gt;false&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;testing&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-07-15 13:22:33&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c61853f09376ea50863a3c9efaba1042&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;testing&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d"&gt;3655e6d8936e2610863a3c9efaba104d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Healthcare Management System"&gt;3655e6d8936e2610863a3c9efaba104d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_policy_c61853f09376ea50863a3c9efaba1042&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-07-15 13:22:33&lt;/sys_updated_on&gt;&lt;table&gt;u_appointment&lt;/table&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_ui_policy&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1715534152</payload_hash>
+        <record_name>testing</record_name>
+        <reverted_from/>
+        <source>7067aa1093ae2610863a3c9efaba10ba</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-15 13:22:33</sys_created_on>
+        <sys_id>4f2853349376ea50863a3c9efaba10de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1980e40556a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-15 13:22:33</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>432853348b76ea506629e63ee7f878de</update_guid>
+        <update_guid_history>432853348b76ea506629e63ee7f878de:1715534152</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-26 09:44:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>6352e30d966749b5855a0e01c58f6cf9</sys_id>
+        <sys_metadata>c61853f09376ea50863a3c9efaba1042</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>testing</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_parent display_value="">1d6cb61c93ee2610863a3c9efaba10de</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_scope_delete display_value="">1a9e9d134e794dd889d12b6243941a40</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_c61853f09376ea50863a3c9efaba1042</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_c61853f09376ea50863a3c9efaba1042">4f2853349376ea50863a3c9efaba10de</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-26 09:44:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

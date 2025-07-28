@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>billing_overdue_with_do_something_until</internal_name>
+        <label_cache>[{"name":"Updated_1.current.u_patient_id.u_email","label":"Trigger - Record Updated➛Billing Record➛Patient Id➛Email","reference":"","reference_display":"Email","type":"string","base_type":"string","parent_table_name":"u_patient_record","column_name":"u_email","usedInstances":{"03279f47-8ab7-45d7-a4aa-e1a138553d3b":["ah_to"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Billing Record","reference":"u_billing","reference_display":"Billing","type":"reference","base_type":"reference","usedInstances":{"03279f47-8ab7-45d7-a4aa-e1a138553d3b":["record"]},"attributes":{}},{"name":"Updated_1.current.u_status","label":"Trigger - Record Updated➛Billing Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"u_billing","column_name":"u_status","choices":[{"label":"-- None --","used":false,"rawLabel":"-- None --","selected":false,"missing":false,"image":"","reference":false,"value":""},{"used":false,"label":"New","rawLabel":"New","selected":false,"missing":false,"image":"","reference":false,"value":"new","parameters":{"name":"u_billing","dependent_values":[""]}},{"used":false,"label":"Pending","rawLabel":"Pending","selected":false,"missing":false,"image":"","reference":false,"value":"pending","parameters":{"name":"u_billing","dependent_values":[""]}},{"used":false,"label":"Paid","rawLabel":"Paid","selected":false,"missing":false,"image":"","reference":false,"value":"paid","parameters":{"name":"u_billing","dependent_values":[""]}},{"used":false,"label":"Overdue","rawLabel":"Overdue","selected":false,"missing":false,"image":"","reference":false,"value":"overdue","parameters":{"name":"u_billing","dependent_values":[""]}}],"usedInstances":{"df6abd0b-cbda-4f7e-8947-cb87344721f7":["condition"]}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Billing Overdue with Do something Until</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-24 16:00:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e2a2d2ff93fa6a90863a3c9efaba10e6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Billing Overdue with Do something Until</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_hub_flow_e2a2d2ff93fa6a90863a3c9efaba10e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-24 17:05:34</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=e2a2d2ff93fa6a90863a3c9efaba10e6"/>
+    <sys_variable_value action="delete_multiple" query="document_key=e2a2d2ff93fa6a90863a3c9efaba10e6"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=e2a2d2ff93fa6a90863a3c9efaba10e6"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=e2a2d2ff93fa6a90863a3c9efaba10e6^sys_idNOT INa2a2daff93fa6a90863a3c9efaba1000"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>e2a2d2ff93fa6a90863a3c9efaba10e6</id>
+        <name>Billing Overdue with Do something Until</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-24 16:00:39</sys_created_on>
+        <sys_id>a2a2daff93fa6a90863a3c9efaba1000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-24 16:00:39</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=a2a2daff93fa6a90863a3c9efaba1000"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=e2a2d2ff93fa6a90863a3c9efaba10e6^sys_idNOT IN00f5daf3933e6a90863a3c9efaba10ea,3fe512f3933e6a90863a3c9efaba105c,40f5daf3933e6a90863a3c9efaba10e7"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Billing Overdue with Do something Until">e2a2d2ff93fa6a90863a3c9efaba10e6</model>
+        <model_id>e2a2d2ff93fa6a90863a3c9efaba10e6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_e2a2d2ff93fa6a90863a3c9efaba10e6</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-24 16:14:57</sys_created_on>
+        <sys_id>00f5daf3933e6a90863a3c9efaba10ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-24 16:14:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=00f5daf3933e6a90863a3c9efaba10ea"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Billing Overdue with Do something Until">e2a2d2ff93fa6a90863a3c9efaba10e6</model>
+        <model_id>e2a2d2ff93fa6a90863a3c9efaba10e6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_e2a2d2ff93fa6a90863a3c9efaba10e6</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-24 16:14:56</sys_created_on>
+        <sys_id>3fe512f3933e6a90863a3c9efaba105c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-24 16:14:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3fe512f3933e6a90863a3c9efaba105c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Billing Overdue with Do something Until">e2a2d2ff93fa6a90863a3c9efaba10e6</model>
+        <model_id>e2a2d2ff93fa6a90863a3c9efaba10e6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_e2a2d2ff93fa6a90863a3c9efaba10e6</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-24 16:14:57</sys_created_on>
+        <sys_id>40f5daf3933e6a90863a3c9efaba10e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-24 16:14:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=40f5daf3933e6a90863a3c9efaba10e7"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=e2a2d2ff93fa6a90863a3c9efaba10e6"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e2a2d2ff93fa6a90863a3c9efaba10e6"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=e2a2d2ff93fa6a90863a3c9efaba10e6^sys_idNOT IN44f51ef3933e6a90863a3c9efaba1000"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Billing Overdue with Do something Until">e2a2d2ff93fa6a90863a3c9efaba10e6</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-24 16:14:57</sys_created_on>
+        <sys_id>44f51ef3933e6a90863a3c9efaba1000</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-24 17:02:52</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=e2a2d2ff93fa6a90863a3c9efaba10e6^sys_idNOT IN82e06e73937e6a90863a3c9efaba10c1"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Billing Overdue with Do something Until">e2a2d2ff93fa6a90863a3c9efaba10e6</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>df6abd0b-cbda-4f7e-8947-cb87344721f7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-24 17:02:52</sys_created_on>
+        <sys_id>82e06e73937e6a90863a3c9efaba10c1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-24 17:02:52</sys_updated_on>
+        <ui_id>03279f47-8ab7-45d7-a4aa-e1a138553d3b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2XSW/bOBSA/wqhs6vKe5xb2yBogemC1tM5NIVAkVTMKSVqKCquJvB/n0eJ2qJGce006AA+iuTbv/dIfbl1OHXOnRk98xZBOMNLbzqZet7ZZLUKpqvQO1uuvDGhzsiJccTgpGJEKvN9g0VmFm5v/0wo1oz6Y5dkSrFY73awT3maCJx/tsdghWy4oLDvnH/5OnISrECjZso5v72zpfOE+QIHTIDghSRZBErRmwvQsa+3lfQaq2um0cfK67tRGFPwTa0Rn5tF2DJueSOHfdcspgyMhlikbOREOIZgpcrrFcUwfR+LZmHDYw0qX6SpJBwSkyK9YYhFmAu05XqDMCrNu47R9z3l/4IL04lRFTJIAjEe8ZhwCh45rWXf5hS23zTbZCM5Ye8TzWVcJlrjQFQ5lyKL4ndl1KYqLMSZ0K2qZCnoZYkJ0/itVQYxhJ82cvuxsnvJ4yIhNkAhCRb1F9Za8SCDOItCCoZVo88vXDI6wRITrMhxhJOEx9d+ouQNLxSDm5F7LeDDDYXcgnzKr2MXExOTCwnH7iWsXxTLn7HiJsC3oAaEd0WC/H8y41MZYte4OesXdYejKVE80S9A8Q2zIexGtgnGqyGs6KzBp6WzaYTMD7gQEFgf/pf1xmE9sDb20LvS3r6+doTv8d3i31mz9I+Pon8NyOuy90rYkbZu1MSfeV3i7yH90Qm3jh6M+K/BGOqa+iWdNrbC+IN4PwS1t1gEwSKYL6cNKCsS0mUQLvCSTBswtjCrVITVN7+YVS2yx32ibUsfiDMIP78swhvt7WUlDJNPZJShvyp3hyKwfAdSwlyKG7gnR8Fdkoi0RFA7kcNAry2bxWbc6w3WiKcohXK5aC0Rt863JEYolxmKslTDMQ07nbbp3BGzJ+kYW1q7evHDuv8vWurY1pkPz1jcgIc3vpbDbyI38xOsefnGgI8CkN0O9Vvr54QP68BPkP3iPto30Lp1ZT9q22RppdP22HS4x8qHRq/FWteDd7ogOhcEZYJHvChu2YfHAk4H6868TqkJaQH+iO/7Lop7uFQJvnrV9+8eFGeHjfsTi0/H4njwn44tOrUOngbGPXyqBF/eoTEYwnF+wvF3x3E+XHrSKXaaBX8zoltIfsA5Mj99fTRbO49ydT/sZy1Ye/kjz+9BdXG6xH+nJykeLHc46c4gSfMWk1eZ501JgoyHzzSP84gwJaUOIA3fik165VyVx9hrlqMP5ZMTVciWCp4n5Yk+2tbATyg4rANer9/+UfG/R0LqEV2mo5cfS/5GR6LhfnnkiF7M59PFifz2jE62dEKVTBIb21Fz+ut/xV1gqroWAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=e2a2d2ff93fa6a90863a3c9efaba10e6"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=e2a2d2ff93fa6a90863a3c9efaba10e6^sys_idNOT IN40f51ef3933e6a90863a3c9efaba1002,e981eab3937e6a90863a3c9efaba10ae"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">48f51ef3933e6a90863a3c9efaba1001</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Billing Overdue with Do something Until">e2a2d2ff93fa6a90863a3c9efaba10e6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Do the following until">eaeb040687210300e6c2c88fc0e3ec89</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-24 16:14:57</sys_created_on>
+        <sys_id>40f51ef3933e6a90863a3c9efaba1002</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-24 17:05:34</sys_updated_on>
+        <ui_id>df6abd0b-cbda-4f7e-8947-cb87344721f7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Uy27bMBD8FYNnQZClOg58cxsEMOAmRe3k0gbCmqRsohTJ8mHHNfzvXerhBE3cF3qsTuIsd2dmNdCB6OBN8G6pp86JtSKTTw8JESpi+H4gCmpOJoRqxYQXWpUNkJAtyBALdzfL2XzwdjafLwazxeDDdHaFVSackbC//+kluhGSWd5xGrA42XNLJocfSn5veClhxSXOWngr1BrbBcPTikFOV9mbcZEVwyLLLoY5zcdFhc8FjEcZ3usb3/UWBvMGSc56i3yIu55JWxZlDbMsIfzRc8U4clcgHU9IDYqB13Z/QiwHdqvkE7ARyuM8Ei8/OvENh+ejUbxYcTRJeVs8HctufS1MN1pQfmuiwhbxsJJdD9Uy1OqmNRIXzysI0veLRyQ4nMdNFB1VdJKqxUbvPvaE10I1Drui1BTk6QQe97AKnrv4ZbjkNQ4qazAGt1Maq7eiaUYtdbqWeEgrqXdIGgOVAo3CU9wRpNeIXzXwPVgRXbzHMdh8bNyXX0PkbX10isvWNF5w1Arjpzhuyztxx+RlQJ9l83C4M8jLWTlMabBo1aehdB58cMfj55BlBTOAOXoR2D/o/BcpZuNhcVmdS/ElfS3Fr+T3fHTzX0XX2/C7yc3irP/R7aOLn9CVbTY7bw35X0f6Iea3ZXBtcBinwqGQZcRm/a85FvaYAEGfQzttv0QLT9jxO70mZorkBQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2981eab3937e6a90863a3c9efaba10ae</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Billing Overdue with Do something Until">e2a2d2ff93fa6a90863a3c9efaba10e6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id>df6abd0b-cbda-4f7e-8947-cb87344721f7</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-24 17:05:34</sys_created_on>
+        <sys_id>e981eab3937e6a90863a3c9efaba10ae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-24 17:05:34</sys_updated_on>
+        <ui_id>274b8235-ef84-4bd7-bd05-68f3aba80d5d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YbW+bMBD+K4jPWYYhQJNv07pp+7AXbVG/TBMy5kisOcCMaZdV/e+zwbw0gYS26d6lSInvzN1zvucOX67NtBBZIfJl+izP6SoxF58+T0yaKJn8fW3SyFyYs7nvuGdo5juWgxzLCj0EnjfzvTD2sH/mmhMzwRuQO6OCY0HTJBDbDKT4ErNCyeFbxiihIqg3SF1E84zh7YXe8kJvMTpbyJqyiIOGlWEuvQjg5uJ6R6XcBQyHwKSl5+uUEuV9LPj6wXPt2VhW6AeCKr8WEoF2k/JIYUKWNZGBCkgikI5jzHKYmBucRFikfNtIOODoXcJawZomQtoz1eZvOf0ujc8stS8GGSCBStcsA31wlbhCUSWrjqPvKA9lQgdg3UxaGx+ASfUl9NngWtdjA3VtvAdOIBF41Wsla7Q9duwbmdUIYlww8fx0IaIThGifKERHhVil711Wqhamo+iFQ6ZzTlJWbJK3FQ3N5kAuDlVVteX8eHEVuUQFmaKr4p8mY/xxnV59qLn2kiYlVq1kKcGsWWEhOA0LoVJzbQKDjTQUbHCW0WQVZDy9pOXDMozNdMXkYhqz9Eo6Va1miokCMpXVgacvpfy8FF9gTtUBvJFm5MM3JfGDr4XyWx2BRhyUB6Y25ITTTDwjKl8anEpRWf1hjCIPeSj0Hc+W1e/MiEfAmwMghOe21VZ5J1eCboAHZRcMJDxQ605W93vXvVvVubT+dFmZH4u3h3olYKMEbCjAhkY8OjTd0soklfJAKx6ht5W27tLcmuq4U3H8KQyXic+DisI6ttL5g5l/ZjmOY82J6/gNk6IIII79ENmAWnpUnGhJ8jhUf50IWFXxjoS3T/SDmDWHaePnP3f/VO5CjGYuGbqzhXs86Hn1orlvPbGQ/BjIXljyY+2TGdnGq7TguWEbb2hSntW9O3kLYWwIPY8ORXW7P+9fSX7h1fM/w+/D8IjgGbLcAXrY3i4X9u6jQSrhqeze7tanmJhGYKsfXJYXD757kTY64MaHMTBXOb/NXIVjAd3zrtd981MIccq7r9JG0IwihyecI87QnZzZD541avf980Wt3alpwYvfsaRrhGQbHJr3Ots0NVvSHav/2/8ZHGkGKLbdaLDgfOd4Ff3kKWUE4KEOsT+djIjp2Hgy+wvefw+slf7X1OSfqaE4dF154xqgpGfv8i0na4gK9kgV02SwrpgR8DrXQZkoQ6zBiFMmM6BWHbhDYejz5R3XujzcE5aHY98uD7JJuiD6SuVjq/4Xroz3vRp+VkysLOUVpSIgNJcOl0r2uv5TXim2kgSUdEVXKf+ioLaymx8aqyAN3hcAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=e2a2d2ff93fa6a90863a3c9efaba10e6"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=e2a2d2ff93fa6a90863a3c9efaba10e6"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e2a2d2ff93fa6a90863a3c9efaba10e6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-24 16:14:57</sys_created_on>
+        <sys_id>44f5daf3933e6a90863a3c9efaba10e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-24 16:14:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e2a2d2ff93fa6a90863a3c9efaba10e6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-24 16:14:57</sys_created_on>
+        <sys_id>84f512f3933e6a90863a3c9efaba1062</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-24 16:14:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e2a2d2ff93fa6a90863a3c9efaba10e6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-24 16:14:57</sys_created_on>
+        <sys_id>ccf5daf3933e6a90863a3c9efaba10eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-24 16:14:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_e2a2d2ff93fa6a90863a3c9efaba10e6"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_e2a2d2ff93fa6a90863a3c9efaba10e6"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=e2a2d2ff93fa6a90863a3c9efaba10e6"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=e2a2d2ff93fa6a90863a3c9efaba10e6"/>
+</record_update>

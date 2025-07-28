@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=1184000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>-&gt;Create a flow to send medication reminders to patients based on their prescribed schedule.
+-&gt;Automatically generate and send reminders via email or SMS at specified times.
+-&gt;Update the medication record with the reminder status.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>medication_reminders</internal_name>
+        <label_cache>[{"name":"ee5b1da9-6922-4e10-a1fb-93149051bf66.Records","label":"1 - Look Up Records➛Medication Records","reference":"u_medication","reference_display":"Medication","type":"records","base_type":"records","usedInstances":{"a9235bcd-450b-43da-851a-d80dddd61138":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a9235bcd-450b-43da-851a-d80dddd61138.item","label":"2 - For Each➛Medication Record","reference":"u_medication","reference_display":"Medication","type":"reference","base_type":"reference","usedInstances":{"07a533a9-fd38-4a56-95bc-6800a9e2b5ff":["record"],"62a0567f-4ed7-44c2-b373-af20d399f9a3":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"a9235bcd-450b-43da-851a-d80dddd61138.item.u_patient_id.u_email","label":"2 - For Each➛Medication Record➛Patient Id➛Email","reference":"","reference_display":"Email","type":"string","base_type":"string","parent_table_name":"u_patient_record","column_name":"u_email","usedInstances":{"07a533a9-fd38-4a56-95bc-6800a9e2b5ff":["ah_to"]}}]</label_cache>
+        <master_snapshot>4d277d2393b62a90863a3c9efaba1037</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Medication Reminders</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>81277d2393b62a90863a3c9efaba1063</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:02:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3b92f5a793762a90863a3c9efaba10f7</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Medication Reminders</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_hub_flow_3b92f5a793762a90863a3c9efaba10f7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:56</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=3b92f5a793762a90863a3c9efaba10f7"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3b92f5a793762a90863a3c9efaba10f7"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <published_version/>
+        <run_period>1970-01-01 03:01:01</run_period>
+        <run_start>2025-07-23 19:21:55</run_start>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:21:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>81277d2393b62a90863a3c9efaba1063</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:55</sys_updated_on>
+        <time/>
+        <timer_type>1</timer_type>
+        <trigger_definition/>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:81277d2393b62a90863a3c9efaba1063^sys_idNOT IN49277d2393b62a90863a3c9efaba1063"/>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time/>
+        <max_drift/>
+        <name>Trigger:81277d2393b62a90863a3c9efaba1063</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period>1970-01-01 03:01:01</run_period>
+        <run_start>2025-07-23 22:22:56</run_start>
+        <run_time/>
+        <run_type>periodically</run_type>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('81277d2393b62a90863a3c9efaba1063');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:21:55</sys_created_on>
+        <sys_id>49277d2393b62a90863a3c9efaba1063</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:55</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">81277d2393b62a90863a3c9efaba1063</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=3b92f5a793762a90863a3c9efaba10f7"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=3b92f5a793762a90863a3c9efaba10f7"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3b92f5a793762a90863a3c9efaba10f7^sys_idNOT INb392f5a793762a90863a3c9efaba10f8"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3b92f5a793762a90863a3c9efaba10f7</id>
+        <name>Medication Reminders</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:02:10</sys_created_on>
+        <sys_id>b392f5a793762a90863a3c9efaba10f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:02:10</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=b392f5a793762a90863a3c9efaba10f8"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=3b92f5a793762a90863a3c9efaba10f7"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=3b92f5a793762a90863a3c9efaba10f7"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3b92f5a793762a90863a3c9efaba10f7"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=3b92f5a793762a90863a3c9efaba10f7^sys_idNOT INa1c3f52f93762a90863a3c9efaba1000"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Medication Reminders">3b92f5a793762a90863a3c9efaba10f7</flow>
+        <generation_source/>
+        <name>Repeat</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:07:12</sys_created_on>
+        <sys_id>a1c3f52f93762a90863a3c9efaba1000</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:46</sys_updated_on>
+        <trigger_definition display_value="Repeat">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/3VSy07DMBD8FeRziZKmvHJDQpU4ABJUvVRVtLE3raX1A8cpBMS/s3m0QiAsX3bWOzsz8uZTEFRIohDP6BGimAltIwYLtOo8Mr4jrbBUbYConeW+AasgutCJIoYWZ6IOzqzQeILIAzVQw6ALCoMosjSdiQNQiy9dc6+YjxksmJ45HDcOfQaym6v0PM34nqV5kWZ8uSv3mlRAK4rNdiY8BJ6OPffnr5bu6TN5US/UzULmcz5pOr9eZNVlXmVzlQNWORP+cfxbT/zH+U9P+B7RKlQnw39iCQjqyVJ3erHnZMcADLw3+gMnqoA1sgmJY/NUlko3HGo3wnLvtMQnP2gZkAgVTTPSUWvs4+iDa4U1tBTXU7CMtA3zsUHW3KuYJNUve/f2fFy41HYwODXJSaBTBTEGXbURmz55JDRMVBrwXttd6YM76GGYtZhkiC6pyb3x0kbvbAKyF55wRJAsGb8b4DUE3bt4YBoe/hrcl69tv3f0MSkuR9P8YAplqZGm79TIoH285QWH4//72n4DNLU+09oCAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>repeat</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=3b92f5a793762a90863a3c9efaba10f7^sys_idNOT IN284679ef93762a90863a3c9efaba10fc,69c3f52f93762a90863a3c9efaba1001,adc3f52f93762a90863a3c9efaba1010"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Medication Reminders">3b92f5a793762a90863a3c9efaba10f7</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>a9235bcd-450b-43da-851a-d80dddd61138</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:18:04</sys_created_on>
+        <sys_id>284679ef93762a90863a3c9efaba10fc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 22:22:58</sys_updated_on>
+        <ui_id>62a0567f-4ed7-44c2-b373-af20d399f9a3</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9FeQ1oIQAAnajIqSR+pDaEZtOFd3YN8WS8xjboWUQ/z43iRMYqBgqdYMmu/uyzzk5N3neMinYjA1ReP7UH/PAD4KB5w0mQz8aB5E/EAEg+qzLUkiQOjXyTAuK16CKMrHdwnQQjCIuesORF/WGgYDeZORDT0w8Qc/Y94NJX1pMdjuaE9LkCjZLN04ZvpJKaEzZ7Pmly3LQdJNFzWbbo9KlUBVEqKj1scF6jN1u8jIWGS8STG0om+Stm5y7Suf7nCo0VMLxvS7Dd4upQAISgzLYZQmkAmymN2xmdUEJjSAeUrVpO1YytTXRBN6N/E03D72yL0Zixp0IbRg6gep0PAcLT3Qyt4Vu9cokR1NrIjCGQtmbw1zd8JBbmaX1iIVINdOZKpL0vlaEtQccvI/CEAjMS54l8ppW/LTK3h4bkAuZVpI4iirjoNoIrNUyKmwJZ8tQYaVxAnku09cw19laVsMEJem/Kgr6scre6E4jX9M+8BJ3n1SF/oLy8yq9BC1LEnd0DA3vusxszI0CY/ZUSMPwV1EiqYk5CmGlQiVBWDmhHOZa5vYbXbVGB3zXdcsQjc45jE/3hjo4c78QRZigkBwq9U/8fndY+5zzL8DVOP9H9b4/xunMf5K7PZzt3NcFZ/3Rl1l/ck3WdzSu3vv/crw3OPtNPXBSZXLzl9s1JpUiobFgC/Oz8LxAmFK/E/Ofb/7cNlyAudmGhUQlzAckmlXAhFBaDGtSR+vgip2lK7Z/gy/bCX/sVc8VbcZ/81N4+QNgxtaSIwkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Medication Reminders">3b92f5a793762a90863a3c9efaba10f7</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:07:13</sys_created_on>
+        <sys_id>69c3f52f93762a90863a3c9efaba1001</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 22:22:58</sys_updated_on>
+        <ui_id>ee5b1da9-6922-4e10-a1fb-93149051bf66</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VX30/bMBD+V6o8bVJVJbQU1rcJhDQJqASIl41Zl8RpvblOZjstpeJ/3zl2ftAG1kqtBNqj786+7+6+z3G+rzwWeyPvNBn4PgTHpye+3+/7/nDYjyAIw/4wCv1wEHpdT8CMYqSGkFNczoHnZp2TGY1ZBJqlAs0xUxmH5b3zXjV90ZTxWFLhjb4/dL0MJJ6oqfRGqzXXtpA4hJRj6J3DtAZRL7NqSQqftV02t3WurSOVsYHidz36qKmIKWJIgCva9WYgYtCpXFYWSSEeC14bpkxoPNEzwY+KPWHeU9/EJRSriqj1VUvi2mTNyTlouNUyj3QuXWg0TVlEle1HTBPIuT5r2mzAOCt6W2yxZdvdKc9n4tq2w6sOKKeCllwhCJqZQg1yV0ZyO00XNyXKCyaKnjgnTyPg1Qq0lizMtcGz8iinMzyIzCDLmJiQTKZzVmxGLLPehOOil/B0gUkVm4geRAZ4D/sKvQu0nxfme5DMVHGFx+BmBMQ4MoTYEao0l0Ur5yTiuSocEoSyZ3nPXU8t1RkHperKseXkT25w2z64ioltmtkSSZbpr3jEnLrinrtbqeLYrykXpSJmBoV6IQ1MRrBE+iPHA+gvmINNN5qoHvrGyV0aw/LT5585URqkroOjl8EhnTAhsLPVlk2tHTrdPuVb9K6U71mzeW0NdULesF22HeCEHOxNyFjHR5IyJn9/St5dm7YF/xBodPImyY5rPqkU6W572VDopoh25vkWEEqejw0zO+HyNVSO5gmjPG77Xl0Yx9r36uj//F69S5IjoJjY6THBmSgeHwj0UOz3375iv6zxrKBXzf3Chnf+pgago9PO085K2AJOqYRbzN25s3haIJb3fUGZ9bu+NDoB9PcmgP7RfgSwqsqsGtnS8/K9aaZZxj+ZeFiPRwo2NgTPbQLbKWewa86j500B93dScJNs1nP+Cuf2/DB9RZHdQ14BU9zq8hGrX7Jg8YTqOnsZFad6Afx3m98xjpSDKso7wCN38KZsh0EtUVQKkVTh8Jqv3ACfR5t3SNC15t2ukC2wlO24gsfOTQWmFaG7RlDpdFLMpnmPfKusjuSDPT4Y3+2XtBxWqwbLmX2If8P9CeHhLzWoWNIFEQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Medication Reminders">3b92f5a793762a90863a3c9efaba10f7</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>a9235bcd-450b-43da-851a-d80dddd61138</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:07:13</sys_created_on>
+        <sys_id>adc3f52f93762a90863a3c9efaba1010</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 22:22:58</sys_updated_on>
+        <ui_id>07a533a9-fd38-4a56-95bc-6800a9e2b5ff</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X7W7bNhSGb4XQb8eVLVu2s19tjKAFkhZIgg5FUwgUSdlcKFGTqKRe4HvZtezKeijS+rAz1068LcHifzz8enn4Pjzy13uHU+fYGdCx64fRAI9cr++57rg/mYTeJHLHo4nbI9TpOAmOGYzMGJGZbt9iUejA/T2e9L1hSOjRYOiGRwOP4qPxsIePYE0KP7/X88Zdrli8XMI8yvNU4MVnOx0iZM4FzVjiHH/91nFSnMFOimXO8f1a165SBQ6ZgKFXOJsxhS5WktePoBapblNJipglKuCr4JldYGp70Icp9MAkrcrtOOy7YgllICfCImcdJ8YJxUpmiyqSMUw/JaIOzHmiYMm3eS4Jx4rlSM0ZYjHmAt1xNUcYGWFdR6/3Ped/gDivr5eKGOSAaK08IZyCIqcRDmxKoftD3R1NscKXKiuIKrIq05ITlptsUhbhQqiTZswM+JQqLhMzReFQrGZLUcTJR5NEp1qgcZNFDmJYqnOjDwubw8Gjy7m8u1iJPeVJmUWbFSEJFlUrumQ4I/NTzoS+6qSIQxjbcbBSGQ8LpWWCKQSMqvcJSql6LxjJBCuvMsZpypNZkGbylpcbgvy4OxPQ6EZC3sH8nM+SLib6rF24Pdw9hfi0DH/GGdcHP4dlYPKy4+SL/ETgPK+PD/kPfi+0epOMthw9OygNpyeTjKfqLWx1y+xhlx2LXm+yzc90UPu2sWaNXxHEjHKCyxvboOu82bcfZzvoqjnTHnlYp2VsI3bWnIs+mg5LWG9PwozPLGBXQJUy4BuekLLyKqjGbhuqv4HpeUBUobEzRW1a/hkiwCR5YGxtz1Zu/ghSfsaH6/th6IfDkVf7cEIiOgojH4+IV/vuDl7VLMbZTVC+qg1Ieptk2PdiPyZ20LJiAl5iUVCGfl2J2qbTQhJKCU9bsk4IKH1zWma3IqT/pBpkrImURHCZYgGVp5Kkg3VdUnOsEM9RDrfVRVcScXuqxowOWsgCxUWuYJiCnhZ8rWI2eL7cWTvY6PRBr7wIMA8P4HB7IcC1sfE8UPJxn4bdIkihTpmvMGiU/lsu0Sa4h1l0P+53SEFVC+VmPizeOdx+Mluj+3IVtGR728k2pW4D7EZpc58vZC+FIS1c8JiXhjD0Hx4rutVTzG3ZiJAGVgf4E7XD5itDn5xsKtnH0IPHlapXR784R/e2/jNnfstH4aEtvcPuK0u/W/N0uLeph6+m/p+YerjdVqRlpLwIf2NENYxd/wFHFyw2GdvyL705aM9PlJ/rXNn/slL5kPJ9MPBfP1b+cwoOb3m81UpRv/12Srpo+P26cF2PpEhrPlI8WcSEZVKqEBJzU3bSa+faDGPv2QK9Kyhd6GbfT8I8/cUs8CY1I64Tu6BpXuEbhr7IIkMlMjxh3e3j5zi50RPaozYJbM2qZP3157+kZj/Ud7ifqtKZ29m4Lgv5XMViDfH3V+dnNeCjJ9Y5fzj0/FfEn1zo0jvap5lMU3u2Axe7bz8A/kGMKAgaAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=3b92f5a793762a90863a3c9efaba10f7"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=3b92f5a793762a90863a3c9efaba10f7^sys_idNOT INedc3f52f93762a90863a3c9efaba100e"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e5c3f52f93762a90863a3c9efaba100e</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Medication Reminders">3b92f5a793762a90863a3c9efaba10f7</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:07:13</sys_created_on>
+        <sys_id>edc3f52f93762a90863a3c9efaba100e</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:54</sys_updated_on>
+        <ui_id>a9235bcd-450b-43da-851a-d80dddd61138</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51SwW7bMAz9F50Tw7JTY86twFCgh61AV/QyFAYt0YkwWdIkOaln+N9HxU5W9LiTzUfy8T2RE7NDdEMML/Y+BHUwbP/zbcOUSRj9T8xAj2zPVMQ+sA07gR5SPE2Idy2XUG+ruii2O+T5FnjXbuuS7+r8jrddVWXPKKyXYZ6pVargNIyv/88gjkpLj6tIB560RfRsP31KxdFho6FFTYNWBupXkkJey67meS3KoiqLPC++7HhblS0vZAkoK6q7dj6upj+9QWKn0N946ZNUFPmG4XtEI5EGdaADblgPRkK0fmT76AcCPIJ8Mnq8VRyViUTHUu17UH+Im+d5KuyQHAlckrewWR9ygcXRKoFPLiprFiRCq9ceYfXQm++L/LQC7GDQ8boCQoZAfOiS5qRildT9ONrz83XggzIXf2tSWwH6FkGMXrVDxJDWgBp7Imp6cE6ZQ+O8PalLM2nps4OmIOu0PdPQdG4ZiCQ8oyeC7IHwrxf4FbxKLr4RDTXPF/fN7yHNXXysipvFNBUE4ZWL90R3wlXc/JbudWEKy2FIFCrQwJeEPV6vPCVGWrISH6Gz9b+S1H/Y/BcbuMtwLwMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=3b92f5a793762a90863a3c9efaba10f7"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=3b92f5a793762a90863a3c9efaba10f7"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_3b92f5a793762a90863a3c9efaba10f7"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_3b92f5a793762a90863a3c9efaba10f7"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>-&gt;Create a flow to send medication reminders to patients based on their prescribed schedule.
+-&gt;Automatically generate and send reminders via email or SMS at specified times.
+-&gt;Update the medication record with the reminder status.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>medication_reminders</internal_name>
+        <label_cache>[{"name":"ee5b1da9-6922-4e10-a1fb-93149051bf66.Records","label":"1 - Look Up Records➛Medication Records","reference":"u_medication","reference_display":"Medication","type":"records","base_type":"records","usedInstances":{"a9235bcd-450b-43da-851a-d80dddd61138":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a9235bcd-450b-43da-851a-d80dddd61138.item","label":"2 - For Each➛Medication Record","reference":"u_medication","reference_display":"Medication","type":"reference","base_type":"reference","usedInstances":{"07a533a9-fd38-4a56-95bc-6800a9e2b5ff":["record"],"62a0567f-4ed7-44c2-b373-af20d399f9a3":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"a9235bcd-450b-43da-851a-d80dddd61138.item.u_patient_id.u_email","label":"2 - For Each➛Medication Record➛Patient Id➛Email","reference":"","reference_display":"Email","type":"string","base_type":"string","parent_table_name":"u_patient_record","column_name":"u_email","usedInstances":{"07a533a9-fd38-4a56-95bc-6800a9e2b5ff":["ah_to"]}}]</label_cache>
+        <master>true</master>
+        <name>Medication Reminders</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Medication Reminders">3b92f5a793762a90863a3c9efaba10f7</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:21:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4d277d2393b62a90863a3c9efaba1037</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:55</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=4d277d2393b62a90863a3c9efaba1037"/>
+    <sys_variable_value action="delete_multiple" query="document_key=4d277d2393b62a90863a3c9efaba1037"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=4d277d2393b62a90863a3c9efaba1037"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=4d277d2393b62a90863a3c9efaba1037^sys_idNOT INc1277d2393b62a90863a3c9efaba1038"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>4d277d2393b62a90863a3c9efaba1037</id>
+        <name>Medication Reminders</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:21:55</sys_created_on>
+        <sys_id>c1277d2393b62a90863a3c9efaba1038</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:55</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=c1277d2393b62a90863a3c9efaba1038"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=4d277d2393b62a90863a3c9efaba1037"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=4d277d2393b62a90863a3c9efaba1037"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4d277d2393b62a90863a3c9efaba1037"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=4d277d2393b62a90863a3c9efaba1037^sys_idNOT INc5277d2393b62a90863a3c9efaba1042"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Medication Reminders">4d277d2393b62a90863a3c9efaba1037</flow>
+        <generation_source/>
+        <name>Repeat</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:21:55</sys_created_on>
+        <sys_id>c5277d2393b62a90863a3c9efaba1042</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:55</sys_updated_on>
+        <trigger_definition display_value="Repeat">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/3VSy07DMBD8FeRziZKmvHJDQpU4ABJUvVRVtLE3raX1A8cpBMS/s3m0QiAsX3bWOzsz8uZTEFRIohDP6BGimAltIwYLtOo8Mr4jrbBUbYConeW+AasgutCJIoYWZ6IOzqzQeILIAzVQw6ALCoMosjSdiQNQiy9dc6+YjxksmJ45HDcOfQaym6v0PM34nqV5kWZ8uSv3mlRAK4rNdiY8BJ6OPffnr5bu6TN5US/UzULmcz5pOr9eZNVlXmVzlQNWORP+cfxbT/zH+U9P+B7RKlQnw39iCQjqyVJ3erHnZMcADLw3+gMnqoA1sgmJY/NUlko3HGo3wnLvtMQnP2gZkAgVTTPSUWvs4+iDa4U1tBTXU7CMtA3zsUHW3KuYJNUve/f2fFy41HYwODXJSaBTBTEGXbURmz55JDRMVBrwXttd6YM76GGYtZhkiC6pyb3x0kbvbAKyF55wRJAsGb8b4DUE3bt4YBoe/hrcl69tv3f0MSkuR9P8YAplqZGm79TIoH285QWH4//72n4DNLU+09oCAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>repeat</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=4d277d2393b62a90863a3c9efaba1037^sys_idNOT IN41277d2393b62a90863a3c9efaba1042,81277d2393b62a90863a3c9efaba1041,8d277d2393b62a90863a3c9efaba103f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Medication Reminders">4d277d2393b62a90863a3c9efaba1037</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>a9235bcd-450b-43da-851a-d80dddd61138</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:21:55</sys_created_on>
+        <sys_id>41277d2393b62a90863a3c9efaba1042</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:55</sys_updated_on>
+        <ui_id>62a0567f-4ed7-44c2-b373-af20d399f9a3</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy27iMBT9FeQ1oIQAAnajIqSR+pDaEZtOFd3YN8WS8xjboWUQ/z43iRMYqBgqdYMmu/uyzzk5N3neMinYjA1ReP7UH/PAD4KB5w0mQz8aB5E/EAEg+qzLUkiQOjXyTAuK16CKMrHdwnQQjCIuesORF/WGgYDeZORDT0w8Qc/Y94NJX1pMdjuaE9LkCjZLN04ZvpJKaEzZ7Pmly3LQdJNFzWbbo9KlUBVEqKj1scF6jN1u8jIWGS8STG0om+Stm5y7Suf7nCo0VMLxvS7Dd4upQAISgzLYZQmkAmymN2xmdUEJjSAeUrVpO1YytTXRBN6N/E03D72yL0Zixp0IbRg6gep0PAcLT3Qyt4Vu9cokR1NrIjCGQtmbw1zd8JBbmaX1iIVINdOZKpL0vlaEtQccvI/CEAjMS54l8ppW/LTK3h4bkAuZVpI4iirjoNoIrNUyKmwJZ8tQYaVxAnku09cw19laVsMEJem/Kgr6scre6E4jX9M+8BJ3n1SF/oLy8yq9BC1LEnd0DA3vusxszI0CY/ZUSMPwV1EiqYk5CmGlQiVBWDmhHOZa5vYbXbVGB3zXdcsQjc45jE/3hjo4c78QRZigkBwq9U/8fndY+5zzL8DVOP9H9b4/xunMf5K7PZzt3NcFZ/3Rl1l/ck3WdzSu3vv/crw3OPtNPXBSZXLzl9s1JpUiobFgC/Oz8LxAmFK/E/Ofb/7cNlyAudmGhUQlzAckmlXAhFBaDGtSR+vgip2lK7Z/gy/bCX/sVc8VbcZ/81N4+QNgxtaSIwkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Medication Reminders">4d277d2393b62a90863a3c9efaba1037</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>a9235bcd-450b-43da-851a-d80dddd61138</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:21:55</sys_created_on>
+        <sys_id>81277d2393b62a90863a3c9efaba1041</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:55</sys_updated_on>
+        <ui_id>07a533a9-fd38-4a56-95bc-6800a9e2b5ff</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X7W7bNhSGb4XQb8eVLVu2s19tjKAFkhZIgg5FUwgUSdlcKFGTqKRe4HvZtezKeijS+rAz1068LcHifzz8enn4Pjzy13uHU+fYGdCx64fRAI9cr++57rg/mYTeJHLHo4nbI9TpOAmOGYzMGJGZbt9iUejA/T2e9L1hSOjRYOiGRwOP4qPxsIePYE0KP7/X88Zdrli8XMI8yvNU4MVnOx0iZM4FzVjiHH/91nFSnMFOimXO8f1a165SBQ6ZgKFXOJsxhS5WktePoBapblNJipglKuCr4JldYGp70Icp9MAkrcrtOOy7YgllICfCImcdJ8YJxUpmiyqSMUw/JaIOzHmiYMm3eS4Jx4rlSM0ZYjHmAt1xNUcYGWFdR6/3Ped/gDivr5eKGOSAaK08IZyCIqcRDmxKoftD3R1NscKXKiuIKrIq05ITlptsUhbhQqiTZswM+JQqLhMzReFQrGZLUcTJR5NEp1qgcZNFDmJYqnOjDwubw8Gjy7m8u1iJPeVJmUWbFSEJFlUrumQ4I/NTzoS+6qSIQxjbcbBSGQ8LpWWCKQSMqvcJSql6LxjJBCuvMsZpypNZkGbylpcbgvy4OxPQ6EZC3sH8nM+SLib6rF24Pdw9hfi0DH/GGdcHP4dlYPKy4+SL/ETgPK+PD/kPfi+0epOMthw9OygNpyeTjKfqLWx1y+xhlx2LXm+yzc90UPu2sWaNXxHEjHKCyxvboOu82bcfZzvoqjnTHnlYp2VsI3bWnIs+mg5LWG9PwozPLGBXQJUy4BuekLLyKqjGbhuqv4HpeUBUobEzRW1a/hkiwCR5YGxtz1Zu/ghSfsaH6/th6IfDkVf7cEIiOgojH4+IV/vuDl7VLMbZTVC+qg1Ieptk2PdiPyZ20LJiAl5iUVCGfl2J2qbTQhJKCU9bsk4IKH1zWma3IqT/pBpkrImURHCZYgGVp5Kkg3VdUnOsEM9RDrfVRVcScXuqxowOWsgCxUWuYJiCnhZ8rWI2eL7cWTvY6PRBr7wIMA8P4HB7IcC1sfE8UPJxn4bdIkihTpmvMGiU/lsu0Sa4h1l0P+53SEFVC+VmPizeOdx+Mluj+3IVtGR728k2pW4D7EZpc58vZC+FIS1c8JiXhjD0Hx4rutVTzG3ZiJAGVgf4E7XD5itDn5xsKtnH0IPHlapXR784R/e2/jNnfstH4aEtvcPuK0u/W/N0uLeph6+m/p+YerjdVqRlpLwIf2NENYxd/wFHFyw2GdvyL705aM9PlJ/rXNn/slL5kPJ9MPBfP1b+cwoOb3m81UpRv/12Srpo+P26cF2PpEhrPlI8WcSEZVKqEBJzU3bSa+faDGPv2QK9Kyhd6GbfT8I8/cUs8CY1I64Tu6BpXuEbhr7IIkMlMjxh3e3j5zi50RPaozYJbM2qZP3157+kZj/Ud7ifqtKZ29m4Lgv5XMViDfH3V+dnNeCjJ9Y5fzj0/FfEn1zo0jvap5lMU3u2Axe7bz8A/kGMKAgaAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Medication Reminders">4d277d2393b62a90863a3c9efaba1037</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:21:55</sys_created_on>
+        <sys_id>8d277d2393b62a90863a3c9efaba103f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:55</sys_updated_on>
+        <ui_id>ee5b1da9-6922-4e10-a1fb-93149051bf66</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VX30/bMBD+V6o8bVJVJbQU1rcJhDQJqASIl41Zl8RpvblOZjstpeJ/3zl2ftAG1kqtBNqj786+7+6+z3G+rzwWeyPvNBn4PgTHpye+3+/7/nDYjyAIw/4wCv1wEHpdT8CMYqSGkFNczoHnZp2TGY1ZBJqlAs0xUxmH5b3zXjV90ZTxWFLhjb4/dL0MJJ6oqfRGqzXXtpA4hJRj6J3DtAZRL7NqSQqftV02t3WurSOVsYHidz36qKmIKWJIgCva9WYgYtCpXFYWSSEeC14bpkxoPNEzwY+KPWHeU9/EJRSriqj1VUvi2mTNyTlouNUyj3QuXWg0TVlEle1HTBPIuT5r2mzAOCt6W2yxZdvdKc9n4tq2w6sOKKeCllwhCJqZQg1yV0ZyO00XNyXKCyaKnjgnTyPg1Qq0lizMtcGz8iinMzyIzCDLmJiQTKZzVmxGLLPehOOil/B0gUkVm4geRAZ4D/sKvQu0nxfme5DMVHGFx+BmBMQ4MoTYEao0l0Ur5yTiuSocEoSyZ3nPXU8t1RkHperKseXkT25w2z64ioltmtkSSZbpr3jEnLrinrtbqeLYrykXpSJmBoV6IQ1MRrBE+iPHA+gvmINNN5qoHvrGyV0aw/LT5585URqkroOjl8EhnTAhsLPVlk2tHTrdPuVb9K6U71mzeW0NdULesF22HeCEHOxNyFjHR5IyJn9/St5dm7YF/xBodPImyY5rPqkU6W572VDopoh25vkWEEqejw0zO+HyNVSO5gmjPG77Xl0Yx9r36uj//F69S5IjoJjY6THBmSgeHwj0UOz3375iv6zxrKBXzf3Chnf+pgago9PO085K2AJOqYRbzN25s3haIJb3fUGZ9bu+NDoB9PcmgP7RfgSwqsqsGtnS8/K9aaZZxj+ZeFiPRwo2NgTPbQLbKWewa86j500B93dScJNs1nP+Cuf2/DB9RZHdQ14BU9zq8hGrX7Jg8YTqOnsZFad6Afx3m98xjpSDKso7wCN38KZsh0EtUVQKkVTh8Jqv3ACfR5t3SNC15t2ukC2wlO24gsfOTQWmFaG7RlDpdFLMpnmPfKusjuSDPT4Y3+2XtBxWqwbLmX2If8P9CeHhLzWoWNIFEQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=4d277d2393b62a90863a3c9efaba1037"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=4d277d2393b62a90863a3c9efaba1037^sys_idNOT IN49277d2393b62a90863a3c9efaba103e"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e5c3f52f93762a90863a3c9efaba100e</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Medication Reminders">4d277d2393b62a90863a3c9efaba1037</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:21:55</sys_created_on>
+        <sys_id>49277d2393b62a90863a3c9efaba103e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:55</sys_updated_on>
+        <ui_id>a9235bcd-450b-43da-851a-d80dddd61138</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51TXW+cMBD8L37mEB8XVO4tShQpUttIlygvVYQWe7mzamxqm7tQxH/v+uBIlMc+wY53Z2cGMzLT+6737sXcOicPmu1+vUVM6oDR+8g0tMh2THpsHYvYCVQf6nFEvKlTAeWmKLNss8U02UDa1JsyT7dlcpPWTVHEe+TGCjdNNCqk6xQMr//PwI9SCYuLyA4safNo2W78ciQFLUhL0ZRpUvI8K/IsSbJv27Qu8jrNRA4oCiJUUKOi1sfF3RezfuhCaWcJC/B9mdmvKD2CiCyJGL571AJpfQPKYcRa0AK8sQPbedsTYBHEk1bD2nGU2hMdC73vTv6ljWmShMYGyRDH+XAtqyXHGW7uwcMzUXPf26WVH43k6OYoBDbQK3/3GZsbnjovjZ5HPNTqOm1U3+qfcxJsJbh+NkJ6RyKwC0aD9MVH83w05/1V5YPUl1CWQ2U4qLUC762sex/0jAwVtkRUtdB1Uh+qzpqTvAyTljY+KCriRpkzLQ1XNAYehMeUK8QPhN9f4FewMrj4QTQ0PEXMDe5OgXMfXijE6k8flMzOFg/VHEMY4VZ2/pYWnHCRO72FWz9zr5ly6UjCS8Aer/9KOBjoBkn+GTob+zuI/8Cmf9X6VCJ1AwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=4d277d2393b62a90863a3c9efaba1037"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=4d277d2393b62a90863a3c9efaba1037"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_4d277d2393b62a90863a3c9efaba1037"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_4d277d2393b62a90863a3c9efaba1037"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>3b92f5a793762a90863a3c9efaba10f7</sys_id>
+        <latest_snapshot>4d277d2393b62a90863a3c9efaba1037</latest_snapshot>
+        <compiler_build>glide-yokohama-12-18-2024__patch4-05-14-2025_06-04-2025_1836.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=3b92f5a793762a90863a3c9efaba10f7^sys_idNOT IN19277d2393b62a90863a3c9efaba1065"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"19277d2393b62a90863a3c9efaba1065","name":"plan","plan_signature":null}}</plan>
+        <plan_id>3b92f5a793762a90863a3c9efaba10f7</plan_id>
+        <snapshot>8d906e27937a2a90863a3c9efaba1036</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:21:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>19277d2393b62a90863a3c9efaba1065</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:21:56</sys_updated_on>
+        <trigger display_value="">81277d2393b62a90863a3c9efaba1063</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=3b92f5a793762a90863a3c9efaba10f7"/>
+</record_update>

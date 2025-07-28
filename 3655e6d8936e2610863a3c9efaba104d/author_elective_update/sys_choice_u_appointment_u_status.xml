@@ -20,38 +20,38 @@
             <element>u_status</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Confirmed</label>
+            <label>Scheduled</label>
             <language>en</language>
             <name>u_appointment</name>
             <sequence>0</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 11:59:16</sys_created_on>
+            <sys_created_on>2025-07-26 09:59:12</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 11:59:16</sys_updated_on>
-            <value>confirmed</value>
+            <sys_updated_on>2025-07-26 09:59:12</sys_updated_on>
+            <value>scheduled</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>u_status</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Scheduled</label>
+            <label>Confirmed</label>
             <language>en</language>
             <name>u_appointment</name>
             <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 11:59:16</sys_created_on>
+            <sys_created_on>2025-07-26 09:59:12</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 11:59:16</sys_updated_on>
-            <value>scheduled</value>
+            <sys_updated_on>2025-07-26 09:59:12</sys_updated_on>
+            <value>confirmed</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -64,12 +64,12 @@
             <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 11:59:16</sys_created_on>
+            <sys_created_on>2025-07-26 09:59:12</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 11:59:16</sys_updated_on>
+            <sys_updated_on>2025-07-26 09:59:12</sys_updated_on>
             <value>completed</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -83,13 +83,70 @@
             <sequence>3</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-07-01 11:59:16</sys_created_on>
+            <sys_created_on>2025-07-26 09:59:12</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-07-01 11:59:16</sys_updated_on>
+            <sys_updated_on>2025-07-26 09:59:12</sys_updated_on>
             <value>cancelled</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>No Show</label>
+            <language>en</language>
+            <name>u_appointment</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-26 09:59:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-26 09:59:12</sys_updated_on>
+            <value>no-show</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>In Progress</label>
+            <language>en</language>
+            <name>u_appointment</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-26 09:59:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-26 09:59:13</sys_updated_on>
+            <value>in-progress</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CheckIN</label>
+            <language>en</language>
+            <name>u_appointment</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-07-26 09:59:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-07-26 09:59:13</sys_updated_on>
+            <value>check-in</value>
         </sys_choice>
     </sys_choice>
 </record_update>

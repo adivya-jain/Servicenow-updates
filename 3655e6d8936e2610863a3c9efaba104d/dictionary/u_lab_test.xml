@@ -11,6 +11,7 @@
         </element>
         <element attributes="encode_utf8=false" label="Patient Id" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Results" max_length="1000" name="u_results" type="string"/>
+        <element attributes="encode_utf8=false" label="Refered By(Doctor)" mandatory="true" max_length="32" name="u_doctor" reference="u_doctor" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Test Type" mandatory="true" max_length="40" name="u_test_type" type="string">
             <choice>
                 <element inactive_on_update="false" label="Blood Test" sequence="0" value="blood test"/>

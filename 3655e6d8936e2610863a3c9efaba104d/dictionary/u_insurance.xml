@@ -4,10 +4,13 @@
             <choice>
                 <element inactive_on_update="false" label="Active" sequence="1" value="active"/>
                 <element inactive_on_update="false" label="Expired" sequence="2" value="expired"/>
+                <element inactive_on_update="false" label="Update Requested" sequence="3" value="update-requested"/>
                 <element inactive_on_update="false" label="New" sequence="0" value="new"/>
             </choice>
         </element>
+        <element label="Renew Insurance Mail Sent?" max_length="40" name="u_mail_sent" type="boolean"/>
         <element label="Insurance Expiry Date" max_length="40" name="u_expiry_date" type="due_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Insurance Expiry Date" max_length="40" name="u_insurance_expiry_date" type="glide_date_time"/>
         <element attributes="encode_utf8=false" label="Patient Id" mandatory="true" max_length="32" name="u_patient_id" reference="u_patient_record" type="reference"/>
         <element attributes="audit=true,edge_encryption_enabled=true,encode_utf8" label="Coverage Details" max_length="40" name="u_coverage_details" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Policy Number" mandatory="true" max_length="40" name="u_policy_number" type="string"/>

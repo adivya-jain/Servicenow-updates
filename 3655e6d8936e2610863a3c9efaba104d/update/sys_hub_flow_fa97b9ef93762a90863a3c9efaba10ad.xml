@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=2678000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>-&gt;Create a flow to send insurance renewal reminders to patients whose policies are nearing expiry.
+-&gt;Automatically generate and send reminders via email or SMS at specified intervals before the policy expiry date.
+-&gt;Update the insurance record with the renewal reminder status.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>insurance_renewal_reminders</internal_name>
+        <label_cache>[{"name":"9ad6662f-8182-4b10-bf73-588920588ff6.Records","label":"1 - Look Up Records➛Insurance Records","reference":"u_insurance","reference_display":"Insurance","type":"records","base_type":"records","usedInstances":{"dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item","label":"2 - For Each➛Insurance Record","reference":"u_insurance","reference_display":"Insurance","type":"reference","base_type":"reference","usedInstances":{"df7c07cb-f3a0-413b-95b6-88d9761ea839":["record"],"82d31d3b-aaf9-498c-bbb6-97bba3d7d0d6":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.u_patient_id.u_email","label":"2 - For Each➛Insurance Record➛Patient Id➛Email","reference":"","reference_display":"Email","type":"string","base_type":"string","parent_table_name":"u_patient_record","column_name":"u_email","usedInstances":{"df7c07cb-f3a0-413b-95b6-88d9761ea839":["ah_to"]}},{"name":"dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.u_expiry_date","label":"2 - For Each➛Insurance Record➛Insurance Expiry Date","reference":"","reference_display":"Insurance Expiry Date","type":"due_date","base_type":"due_date","parent_table_name":"u_insurance","column_name":"u_expiry_date","usedInstances":{"df7c07cb-f3a0-413b-95b6-88d9761ea839":[null]}},{"name":"dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.number","label":"2 - For Each➛Insurance Record➛insurance_id","reference":"","reference_display":"insurance_id","type":"string","base_type":"string","parent_table_name":"u_insurance","column_name":"number","usedInstances":{"df7c07cb-f3a0-413b-95b6-88d9761ea839":[null]}},{"name":"dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.u_coverage_details","label":"2 - For Each➛Insurance Record➛Coverage Details","reference":"","reference_display":"Coverage Details","type":"string","base_type":"string","parent_table_name":"u_insurance","column_name":"u_coverage_details","usedInstances":{"df7c07cb-f3a0-413b-95b6-88d9761ea839":[null]}}]</label_cache>
+        <master_snapshot>70d10eaf93b62a90863a3c9efaba1077</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Insurance renewal reminders</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>05d10eaf93b62a90863a3c9efaba10b1</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:23:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fa97b9ef93762a90863a3c9efaba10ad</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Insurance renewal reminders</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_hub_flow_fa97b9ef93762a90863a3c9efaba10ad</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:37</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=fa97b9ef93762a90863a3c9efaba10ad"/>
+    <sys_variable_value action="delete_multiple" query="document_key=fa97b9ef93762a90863a3c9efaba10ad"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>3</day_of_month>
+        <day_of_week/>
+        <name/>
+        <published_version/>
+        <run_period/>
+        <run_start>2025-07-23 20:08:37</run_start>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>05d10eaf93b62a90863a3c9efaba10b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:37</sys_updated_on>
+        <time>1970-01-01 09:00:00</time>
+        <timer_type>4</timer_type>
+        <trigger_definition/>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:05d10eaf93b62a90863a3c9efaba10b1^sys_idNOT INc9d10eaf93b62a90863a3c9efaba10b1"/>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time/>
+        <max_drift/>
+        <name>Trigger:05d10eaf93b62a90863a3c9efaba10b1</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>3</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period/>
+        <run_start>2025-07-23 20:08:37</run_start>
+        <run_time>1970-01-01 09:00:00</run_time>
+        <run_type>monthly</run_type>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('05d10eaf93b62a90863a3c9efaba10b1');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:37</sys_created_on>
+        <sys_id>c9d10eaf93b62a90863a3c9efaba10b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:37</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">05d10eaf93b62a90863a3c9efaba10b1</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=fa97b9ef93762a90863a3c9efaba10ad"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=fa97b9ef93762a90863a3c9efaba10ad"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=fa97b9ef93762a90863a3c9efaba10ad^sys_idNOT IN3297b9ef93762a90863a3c9efaba10ae"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>fa97b9ef93762a90863a3c9efaba10ad</id>
+        <name>Insurance renewal reminders</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:23:57</sys_created_on>
+        <sys_id>3297b9ef93762a90863a3c9efaba10ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:23:57</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3297b9ef93762a90863a3c9efaba10ae"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=fa97b9ef93762a90863a3c9efaba10ad"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=fa97b9ef93762a90863a3c9efaba10ad"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fa97b9ef93762a90863a3c9efaba10ad"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=fa97b9ef93762a90863a3c9efaba10ad^sys_idNOT IN8d3bbd6793b62a90863a3c9efaba10b3"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Insurance renewal reminders">fa97b9ef93762a90863a3c9efaba10ad</flow>
+        <generation_source/>
+        <name>Monthly</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:39:40</sys_created_on>
+        <sys_id>8d3bbd6793b62a90863a3c9efaba10b3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:40:56</sys_updated_on>
+        <trigger_definition display_value="Monthly">2ca52504c32222002841b63b12d3ae4a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+1TXW+bMBT9K5GfM2RC0nW8Taoi7aGrtEZ5qSp0wZdgydjMmLSs6n/fNTg0bZNplfY4xAP3w8f3HM69e2IKclQsZVfQz0w5uzbaVWzOpHZoNahN3yBVfbhDS4UatABnbM9SZzucs9KaeoN1o8BRZwmqpaSxgrrTmM/ZHlSHt337TRAOAWioPaKAPjNlVof7hi5KJ/RdVFIJi5qld/dz1oClE87DPb0pSQ8JeXIBK74skgU9nC8ul3F+keTxQiSAl0CAZziensS9ZXzEBR8daoFi4vlODYsgbrTqp46KgEbiNTy28hdhL7nvK5F4FDjWpjATsiUp+zFdVEYWeNM4afSYcZCrcKYwqqv195EExQJL6JTbBiUp07WEh40f2Q8RJipvK/Pw43DhWuqBXigqU4CaInDOyrxz2HrxUWFNQFkNTSP1Lmus2cvhMM1SRztFQVQq80CXtnKnIyj84BEpBNGa8ldDegtWehbXBDMIHKTOgvKv/sfzoE32s/NTjSwDn2yUhBqCZGuJKnisLaxs3Fe6fn/w5PP8xesbSZq98/gwf+bG2gdtft7nAe/g7/jLZ/6Jx/TOeJxyTi+bGGz/2PSxtchXYrU4uxZwvBZBjtcDuxOiHNP9N6swQP3fhcMu/I3bT3n7/jc3Ba1GyQUAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>monthly</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=fa97b9ef93762a90863a3c9efaba10ad^sys_idNOT IN013bbd6793b62a90863a3c9efaba10b8,413bbd6793b62a90863a3c9efaba10b5,a37b75a793b62a90863a3c9efaba10a0"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Insurance renewal reminders">fa97b9ef93762a90863a3c9efaba10ad</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:39:40</sys_created_on>
+        <sys_id>013bbd6793b62a90863a3c9efaba10b8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:07:21</sys_updated_on>
+        <ui_id>df7c07cb-f3a0-413b-95b6-88d9761ea839</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Insurance renewal reminders">fa97b9ef93762a90863a3c9efaba10ad</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:39:40</sys_created_on>
+        <sys_id>413bbd6793b62a90863a3c9efaba10b5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:55:11</sys_updated_on>
+        <ui_id>9ad6662f-8182-4b10-bf73-588920588ff6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VXW0/bMBT+K1WeNimqElIK69MmEBIPUAkQLwhZTuIk3hw7s51eQPz3HcdJegtQuo7Bo4/P5TvH3+c4d48OjZ2Rc5wMPA/7h8dHnhcEnjccBhH2wzAYRqEXDkLHdTjOCXhqHDICywlmpVmXiHJVSswjY42pKhie39ab50tbUUZZLAl3Rnf3rlNgCfk0kc7ocW1LzwuCGA4Jgww3plzv0tR2t4a6ErwJ3RRolojb1ELGBovnOmSmCY8JlEowU8R1csxjrIWctxZJcDzmbGHIKNeQ0THOM0UfIP2xZ/wSAm1FxO61S1SPyZqjTNCIjAtNBbcWC9RuClbm/NI2YAZMElwy3QwYLKWCfKQwmA2IGlFynYnpVVPwjPKqvXqTiQizdoW1ljQsNVHmLAgjOSRCOS4KylNUSDGhVTBgyfspg0U/YWIKRRVNeR9HBngfRoT7Z2A/rcy3WFLTxQWkgWAARBmcNrJDV6KU1VQmKGKlqjaAJ8rmcp6qWaHfpUFpu677Q3ZE4KAiSQv9AwImpG7lyd2KzYfeghKR4DE1NVU3pRGZFVTOEXRHxpc3GVW9XHCdff+JJ9hCGKWqH5KUcg7jGifG58K4fPm65gQdrGxvyuX9Cu8mxpPlaW076c7grvHXslyx1bL09yZLgPufhKll+fF0+ZrSbMOvyC06epEEh4vzVkJqZCe3pLdNIezM0DNKWLzyudgCXBM8NmTrhfPn8NYETUyNte/Gwaf/bnxIegKgGNl5U84orz7bAHQ/vPVevry+rfGgOv4Faysb3LKb7MU9LXoPu9+y1bk2/N0CZBN4DYh6NxZlB/Dmfm3S19QN9kbd4OBt1AXi3D226NupdQy4eZ2Zo2v8H4w/XvcHdi0F+E/3LfVPdqvpv7Xmgam5ps3gTeJcZpbdOX2GYHt++z0jNvdfqjuD0LoesmJFUxqnRC+qN16x0FPMfnXt1+xqNVS199fvyMGL2hv6C52BBpAkCo5q+SHpw2Nj83rwXWve7XY455qk1fC2hdhEXuBZ76rF2Am8viJoW6Pm9GCP76/3+Lw1g+9UTzP/T/HjtCuF7/8ASbkwOtoPAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Insurance renewal reminders">fa97b9ef93762a90863a3c9efaba10ad</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:40:56</sys_created_on>
+        <sys_id>a37b75a793b62a90863a3c9efaba10a0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:40:56</sys_updated_on>
+        <ui_id>82d31d3b-aaf9-498c-bbb6-97bba3d7d0d6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UTWvjMBD9K0Fnx9ixkzq5LYRAD9tCd+mlW4wsjROBLHtlOW025L/vyJbTpF8bSqAU1rcZz8x7b+ahuy0RnMxIDDwIp+GERWEUjYJglMRhNomycMQjChASjyhaAFZqYKXmGK+pbGxiu+UsBDbJkmE0gvEwZtN8SMfTZJgAT0KIL1h8kfnCQLHbYR8XdSXp5ta1Y4athOQaFJnd3XukohqRDGgy2z77ZTYVpJJmILFxXrKmAGUGl3OccaqKvvuml/FclsXAmLvpqbBJ/GX5hIFH4NGA4oBwOZU1eKSgilNT6g2ZGd1gQgPl10pu9hUroUyntKCPtfiD8+PA1uWA0pjbwj5M3Yb65ZSCwXVlRKm6jKGZ7DdXyqZQV50Eu1vIaSPNwW6bGudBZSlbEh3D/MeqfLjp8RZCteocW1kyKvcRNUaLrDFQ23OAhHYpBa0qoZZppcu1aJuRSuEvJQZ+LssHxKzFUvmUWd4+Loj6C8zP2/Qt1cKK+I5jsHnXik9/Nxa3k+EIp63mVnDaHgpLa6ZFZb7h4DU4mjvP2Tgbv2cANn2698HMJys3qVB1o6m9yQujXh78+phjf1rMwVWHeSrfo+Y3+DvPHuWcZcdns2zySZZ1jL6YZ//l1GD07lN1cOnWnPWRSwsqZFoj1q8mCCJub/jSr2+VfdC7UOBwA4NuvHeyin7AQoDk9SuyevM6gHTtAPZv7tkcHE6C9vv/9J7x6b3/C0EyCkdDCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=fa97b9ef93762a90863a3c9efaba10ad"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=fa97b9ef93762a90863a3c9efaba10ad^sys_idNOT IN2f7b75a793b62a90863a3c9efaba10a0,c93bbd6793b62a90863a3c9efaba10b5"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">6b7b75a793b62a90863a3c9efaba10a0</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Insurance renewal reminders">fa97b9ef93762a90863a3c9efaba10ad</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:40:56</sys_created_on>
+        <sys_id>2f7b75a793b62a90863a3c9efaba10a0</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:35</sys_updated_on>
+        <ui_id>8ea8a1b8-8034-46aa-aae4-ec6ded5d2389</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">093bbd6793b62a90863a3c9efaba10b5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Insurance renewal reminders">fa97b9ef93762a90863a3c9efaba10ad</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:39:40</sys_created_on>
+        <sys_id>c93bbd6793b62a90863a3c9efaba10b5</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:35</sys_updated_on>
+        <ui_id>dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51STW/bMAz9Lzonhj86z86twFCgh61AV/QyFAYtUYkwWdIkOaln5L+Pip1s6HGXOHwkH98TOTM7RjfG8GLvQ1B7w3Y/3jZMmYTR/5kZGJDtmIo4BLZhR9Bjiue5BVHXdSm3TdGU27u+yLe9/FxtPzVNW+b0K2WdPSO3XoTzmVqFCk7D9Pr/DPygtPC4inTgSVtEz3bzh1ScHHYaetQ0aGWgfiUoLFoh2yJveVXWVZnnZXNX9HXVF6WoAEVNddfOx9X0hzdI7BT6Gy99kooy3zB8j2gE0iAJOuCGDWAEROsntot+JMAjiCejp1vFQZlIdCzVvgf1m7iLPE+FEskRxyV5C7v1IReYH6zi+OSismZBIvR67eFWj4P5tshPK0AJo47XFRAyBuJDlzQnFask+f1gT8/XgQ/KXPytSW056FsEMXrVjxFDWgNqHIioG8A5Zfad8/aoLs2kZcj2moJManuioencMuBJeEZPBNkD4V8u8Ct4lVx8JRpqPl/cd7/GNHfxsSruFtNUELhXLt4T3RFXcee3dK8LU1gOQyBXgQa+JOzxeuUpMdGSFf8XOln/M0n9i53/ACpbBjMvAwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=fa97b9ef93762a90863a3c9efaba10ad^sys_idNOT IN093bbd6793b62a90863a3c9efaba10b9,413bbd6793b62a90863a3c9efaba10b9,c93bbd6793b62a90863a3c9efaba10b9"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>fa97b9ef93762a90863a3c9efaba10ad</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:39:40</sys_created_on>
+        <sys_id>093bbd6793b62a90863a3c9efaba10b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:39:40</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>aa3bb451-b21c-4d62-a010-dcfcb1e7750d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>fa97b9ef93762a90863a3c9efaba10ad</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.u_expiry_date}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:39:40</sys_created_on>
+        <sys_id>413bbd6793b62a90863a3c9efaba10b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:39:40</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>ab0b361a-99b0-407b-b60b-10ab4088dfa8</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>fa97b9ef93762a90863a3c9efaba10ad</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.u_coverage_details}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 19:39:40</sys_created_on>
+        <sys_id>c93bbd6793b62a90863a3c9efaba10b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 19:39:40</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>d1ec4a9c-435f-472c-b2b4-79f0d92af5c4</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=fa97b9ef93762a90863a3c9efaba10ad"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_fa97b9ef93762a90863a3c9efaba10ad"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_fa97b9ef93762a90863a3c9efaba10ad"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>-&gt;Create a flow to send insurance renewal reminders to patients whose policies are nearing expiry.
+-&gt;Automatically generate and send reminders via email or SMS at specified intervals before the policy expiry date.
+-&gt;Update the insurance record with the renewal reminder status.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>insurance_renewal_reminders</internal_name>
+        <label_cache>[{"name":"9ad6662f-8182-4b10-bf73-588920588ff6.Records","label":"1 - Look Up Records➛Insurance Records","reference":"u_insurance","reference_display":"Insurance","type":"records","base_type":"records","usedInstances":{"dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b":["items"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item","label":"2 - For Each➛Insurance Record","reference":"u_insurance","reference_display":"Insurance","type":"reference","base_type":"reference","usedInstances":{"df7c07cb-f3a0-413b-95b6-88d9761ea839":["record"],"82d31d3b-aaf9-498c-bbb6-97bba3d7d0d6":["record"]},"attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.u_patient_id.u_email","label":"2 - For Each➛Insurance Record➛Patient Id➛Email","reference":"","reference_display":"Email","type":"string","base_type":"string","parent_table_name":"u_patient_record","column_name":"u_email","usedInstances":{"df7c07cb-f3a0-413b-95b6-88d9761ea839":["ah_to"]}},{"name":"dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.u_expiry_date","label":"2 - For Each➛Insurance Record➛Insurance Expiry Date","reference":"","reference_display":"Insurance Expiry Date","type":"due_date","base_type":"due_date","parent_table_name":"u_insurance","column_name":"u_expiry_date","usedInstances":{"df7c07cb-f3a0-413b-95b6-88d9761ea839":[null]}},{"name":"dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.number","label":"2 - For Each➛Insurance Record➛insurance_id","reference":"","reference_display":"insurance_id","type":"string","base_type":"string","parent_table_name":"u_insurance","column_name":"number","usedInstances":{"df7c07cb-f3a0-413b-95b6-88d9761ea839":[null]}},{"name":"dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.u_coverage_details","label":"2 - For Each➛Insurance Record➛Coverage Details","reference":"","reference_display":"Coverage Details","type":"string","base_type":"string","parent_table_name":"u_insurance","column_name":"u_coverage_details","usedInstances":{"df7c07cb-f3a0-413b-95b6-88d9761ea839":[null]}}]</label_cache>
+        <master>true</master>
+        <name>Insurance renewal reminders</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Insurance renewal reminders">fa97b9ef93762a90863a3c9efaba10ad</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>70d10eaf93b62a90863a3c9efaba1077</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:36</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=70d10eaf93b62a90863a3c9efaba1077"/>
+    <sys_variable_value action="delete_multiple" query="document_key=70d10eaf93b62a90863a3c9efaba1077"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=70d10eaf93b62a90863a3c9efaba1077"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=70d10eaf93b62a90863a3c9efaba1077^sys_idNOT IN78d10eaf93b62a90863a3c9efaba1077"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>70d10eaf93b62a90863a3c9efaba1077</id>
+        <name>Insurance renewal reminders</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:36</sys_created_on>
+        <sys_id>78d10eaf93b62a90863a3c9efaba1077</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:36</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=78d10eaf93b62a90863a3c9efaba1077"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=70d10eaf93b62a90863a3c9efaba1077"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=70d10eaf93b62a90863a3c9efaba1077"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=70d10eaf93b62a90863a3c9efaba1077"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=70d10eaf93b62a90863a3c9efaba1077^sys_idNOT IN81d10eaf93b62a90863a3c9efaba1083"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Insurance renewal reminders">70d10eaf93b62a90863a3c9efaba1077</flow>
+        <generation_source/>
+        <name>Monthly</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:36</sys_created_on>
+        <sys_id>81d10eaf93b62a90863a3c9efaba1083</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:36</sys_updated_on>
+        <trigger_definition display_value="Monthly">2ca52504c32222002841b63b12d3ae4a</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+1TXW+bMBT9K5GfM2RC0nW8Taoi7aGrtEZ5qSp0wZdgydjMmLSs6n/fNTg0bZNplfY4xAP3w8f3HM69e2IKclQsZVfQz0w5uzbaVWzOpHZoNahN3yBVfbhDS4UatABnbM9SZzucs9KaeoN1o8BRZwmqpaSxgrrTmM/ZHlSHt337TRAOAWioPaKAPjNlVof7hi5KJ/RdVFIJi5qld/dz1oClE87DPb0pSQ8JeXIBK74skgU9nC8ul3F+keTxQiSAl0CAZziensS9ZXzEBR8daoFi4vlODYsgbrTqp46KgEbiNTy28hdhL7nvK5F4FDjWpjATsiUp+zFdVEYWeNM4afSYcZCrcKYwqqv195EExQJL6JTbBiUp07WEh40f2Q8RJipvK/Pw43DhWuqBXigqU4CaInDOyrxz2HrxUWFNQFkNTSP1Lmus2cvhMM1SRztFQVQq80CXtnKnIyj84BEpBNGa8ldDegtWehbXBDMIHKTOgvKv/sfzoE32s/NTjSwDn2yUhBqCZGuJKnisLaxs3Fe6fn/w5PP8xesbSZq98/gwf+bG2gdtft7nAe/g7/jLZ/6Jx/TOeJxyTi+bGGz/2PSxtchXYrU4uxZwvBZBjtcDuxOiHNP9N6swQP3fhcMu/I3bT3n7/jc3Ba1GyQUAAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>monthly</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=70d10eaf93b62a90863a3c9efaba1077^sys_idNOT IN0dd10eaf93b62a90863a3c9efaba1082,41d10eaf93b62a90863a3c9efaba1080,4dd10eaf93b62a90863a3c9efaba1081"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Insurance renewal reminders">70d10eaf93b62a90863a3c9efaba1077</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:36</sys_created_on>
+        <sys_id>0dd10eaf93b62a90863a3c9efaba1082</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:36</sys_updated_on>
+        <ui_id>82d31d3b-aaf9-498c-bbb6-97bba3d7d0d6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVTU/jMBD9K8jntkqatrS9ragqIbEgwYoLi6KJPaGWHCdrO0C36n/fceK05WNZkLig7c3z4Xnv+U16s2FSsDkboYjiWTzhSZwkwygaTkdxNkmyeCgSQIxZj2kokCoN8tIIOt+Dqn1gsxE8Rj7Jpv1kiOP+iM/yPoxn0/4UxTTG0TEfHWcD6bDYbqlPSFspWF+HdorwlVTCoGbzm9seq8DQJIeGzTfPUu+FqiBDRaWXHdbn2N268mdR8rpA7VLZBc9C5yJkjk4XlKEmDyeOegwfHWqBBCQHZbHHCtACXGnWbO5MTQGDIC60Wu8qVlK7lmgBj1b+psmjyNflSMx4EGF3TINAbThfgIMrupm72uz0KiVH22oiMIdauZPDWFtwUTlZ6rbFQaa67lLVhT5vFWG7Cw7eo7YEAivP0yNvaeVXq/LhsgO5lLqRJFBUJQe1O4FzRma183A2DBU2GhdQVVLfpZUp72XTTFCKwZ2iwyBX5QPNtPJOD4B73ANSFQZLii+a8DUY6Ul8p2uoedtjdm1PFFi7p0Iapr9qj6QlFiikjQqNBGnjBN/MjazcNxp1jwH4theWIRu/5TA+2xvq4M79QtSp1LY24J/2hd1PD1If8/07UHW+/9G89usog/VfxM4Oe4/O20Qw/vjTjD/9SsYPNL688//l92j45hf1wEmNxe0TrxcgVWpp1s86ihLhrfDS9X8r+9gGvANntwFLiUrYV4B39seC8DlMWyLPViAkj65Dcvf9/7Q9iCdR8/tC2/Df/A3c/gEs2L+FFQkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Insurance renewal reminders">70d10eaf93b62a90863a3c9efaba1077</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:36</sys_created_on>
+        <sys_id>41d10eaf93b62a90863a3c9efaba1080</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:36</sys_updated_on>
+        <ui_id>9ad6662f-8182-4b10-bf73-588920588ff6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VX30/bMBD+Vyo/bVJUJbQU1qdNICQkoBKgvSBkOYnTenPtzHb6g4r/fefYSbM2sFYqE2iPvjvb391938V5WCGWoiE6zfphSKLj05Mw7PXCcDDoJSSK494gicO4H6MACTKlEGlIzCksZ4QXdl1gJnShiEisNWU652T53TsvG65kwniqqEDDh8cA5UTBeYYqNFxtuHYFxElMOYTee0QbAM0yr5e49DnbVXNb58Y5pEotlDBAdGGoSClgyAjXNEBTIlJipFrWFkVJOhJ8bZgwYeBEZIMXmj3BvaehjcsoZJVQ56uX2FfJmbNzYsidUUViCuVDk4lkCdWuHinNSMHNWdPmAka5YVK4LS5tt1vyYipuXDlQfUDVFLAUGkDQ3CZqkfs0sruJnN9WKC+YKGvinVwmhNcrYoxicWEsnhWinE7hIDwlec7EGOdKzli5GbBMu2MOi27G5Rwu1WwsuiSxwLtQV9K9APt5af5OFLNZXMMxsBkAMQ4Mwa6FWhaqLOUMJ7zQpQO4pd1Z6DlAeqnPONF6nTmUHP8qLG5XB58xdkWzWxLFcvMNjphRn9xzsJMmjsM15RIpUmZR6HZhYLrImVpiyJeObu4nTHemUpjJ1x9kRhyE4Vh3YzpmQkABR5mNubYhnz5vBEEGf7i3RffvLj6kpMt6VpI+axa0rche3Fu2q7YDvLijg4kb8vhI8obL35+699erK8FfRJucvEqy4zWftFQGu1o2VLstp715vgOEiucjy8xOvHwJlad5xihP275hF9ax8Q07+j+/Ye+S5AAoxa57THAmygcJAH0r9oevj9gvGzwr6bXmfmmDib+tAdIxsvO0txJ2gFMp4Q7u7tw7PC0Qq3lfUmZz1ldGL4DewQTQOzqMAFZ1mnUhW2pevUFtN6v4JxtPNuOBgo0N0XObwPa6M9r3zqPnbQH39lJwk2zOc/4C5w78WH1BkcFbjoAJbPX3YadfPGfpmJr17VVUKs2c8J9tfs84XDWqTO8NHr79V2U7iNYSBaVgRTU0r/nyjeB5tD1DosCZ9xshO2CpynFNFp3bGkwrQj9GQOl0XPamOUcua6snef+AD8Z3+yWtmtWqwapnH+J/8XBCePwNyGAvZxcRAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Insurance renewal reminders">70d10eaf93b62a90863a3c9efaba1077</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:36</sys_created_on>
+        <sys_id>4dd10eaf93b62a90863a3c9efaba1081</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:36</sys_updated_on>
+        <ui_id>df7c07cb-f3a0-413b-95b6-88d9761ea839</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=70d10eaf93b62a90863a3c9efaba1077"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=70d10eaf93b62a90863a3c9efaba1077^sys_idNOT IN41d10eaf93b62a90863a3c9efaba107e,c1d10eaf93b62a90863a3c9efaba107f"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">093bbd6793b62a90863a3c9efaba10b5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Insurance renewal reminders">70d10eaf93b62a90863a3c9efaba1077</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:36</sys_created_on>
+        <sys_id>41d10eaf93b62a90863a3c9efaba107e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:36</sys_updated_on>
+        <ui_id>dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51TTW+jMBD9Lz4TxEeXhdyqVpUq7bZSWvWyqtDgj8RaY1PbJGUR/33HgdCqx15C5nnmzXsPMxLT+6737tlcOyf3mmz/vEZE6oDh/5FoaDnZEul560hEjqD6UI9jBawoikxsyrTMNldNmmwa8TPf/CjLKkvwV4gi3nFqLHPThKNMuk7B8PJ9BnqQilm+iOzAojbPLdmOX44kwwVpxUSVJhXNsyLPkiQrr9KmyJs0YzlwViChgoYrbL1f3H0x64culHaWsAC/lpndiuIjiMiSiPB3zzXjuF6AcjwiLWgG3tiBbL3tEbAc2KNWw9pxkNojHQm9707+w41pkoRGwdEQ5fPhWtZLjjMsbsHDE1JT39ullR6MpNzNUTAuoFf+5jM2Nzx2Xho9j3ho1GXaqL7VD3MSZCW4vDZEeocieBeMBumLD/F0MKfdReWd1OdQlkNlKKi1Au+tbHof9IyEK94iUd1C10m9rztrjvI8jFraeK+wiIUyJ1warmgMNAiPMVeI7xC/PcMvYGVw8RtpcHiKiBvcjQLnPrxgiPVbH5TMzhYP9RxDGKFWdv4aFxz5Ind6Dbd+5l4zpdKhhOeA3V++lXAw4A2S9DN0MvZvEP+BTf8BExmbF3UDAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">6b7b75a793b62a90863a3c9efaba10a0</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Insurance renewal reminders">70d10eaf93b62a90863a3c9efaba1077</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:36</sys_created_on>
+        <sys_id>c1d10eaf93b62a90863a3c9efaba107f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:36</sys_updated_on>
+        <ui_id>8ea8a1b8-8034-46aa-aae4-ec6ded5d2389</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=70d10eaf93b62a90863a3c9efaba1077^sys_idNOT IN05d10eaf93b62a90863a3c9efaba1083,09d10eaf93b62a90863a3c9efaba1083,85d10eaf93b62a90863a3c9efaba1083"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>70d10eaf93b62a90863a3c9efaba1077</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.u_expiry_date}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:36</sys_created_on>
+        <sys_id>05d10eaf93b62a90863a3c9efaba1083</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:36</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>ab0b361a-99b0-407b-b60b-10ab4088dfa8</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>70d10eaf93b62a90863a3c9efaba1077</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:36</sys_created_on>
+        <sys_id>09d10eaf93b62a90863a3c9efaba1083</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:36</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>aa3bb451-b21c-4d62-a010-dcfcb1e7750d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>70d10eaf93b62a90863a3c9efaba1077</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{dc1ec6b8-32e5-4c9f-a598-8ed81e47c47b.item.u_coverage_details}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:36</sys_created_on>
+        <sys_id>85d10eaf93b62a90863a3c9efaba1083</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:36</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>d1ec4a9c-435f-472c-b2b4-79f0d92af5c4</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=70d10eaf93b62a90863a3c9efaba1077"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_70d10eaf93b62a90863a3c9efaba1077"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_70d10eaf93b62a90863a3c9efaba1077"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>fa97b9ef93762a90863a3c9efaba10ad</sys_id>
+        <latest_snapshot>70d10eaf93b62a90863a3c9efaba1077</latest_snapshot>
+        <compiler_build/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=fa97b9ef93762a90863a3c9efaba10ad^sys_idNOT INcdd10eaf93b62a90863a3c9efaba10b2"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan/>
+        <plan_id>fa97b9ef93762a90863a3c9efaba10ad</plan_id>
+        <snapshot>70d10eaf93b62a90863a3c9efaba1077</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-23 20:08:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cdd10eaf93b62a90863a3c9efaba10b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-23 20:08:37</sys_updated_on>
+        <trigger display_value="">05d10eaf93b62a90863a3c9efaba10b1</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=fa97b9ef93762a90863a3c9efaba10ad"/>
+</record_update>

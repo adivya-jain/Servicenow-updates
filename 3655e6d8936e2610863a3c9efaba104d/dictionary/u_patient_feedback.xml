@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b3874e6793f62a90863a3c9efaba10e5" label="Patient Feedback" max_length="40" name="u_patient_feedback" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Are You Satisfied with diagnostics?" max_length="40" name="u_statisfied" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Negative" sequence="0" value="negative"/>
+                <element inactive_on_update="false" label="Positive" sequence="1" value="positive"/>
+                <element inactive_on_update="false" label="Neutral" sequence="2" value="neutral"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Feedback Comment" max_length="40" name="u_feedback_comment" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="u_number" type="string"/>
+    </element>
+</database>

@@ -22,5 +22,11 @@
                 <element inactive_on_update="false" label="New" sequence="0" value="new"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="notsent" label="Reminder Status" max_length="40" name="u_reminder_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Not Sent" sequence="1" value="notsent"/>
+                <element inactive_on_update="false" label="Sent" sequence="0" value="sent"/>
+            </choice>
+        </element>
     </element>
 </database>

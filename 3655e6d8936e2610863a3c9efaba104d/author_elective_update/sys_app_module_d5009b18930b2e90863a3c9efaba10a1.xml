@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Appointment">6e7cf2d893ee2610863a3c9efaba1043</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Appointments</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>u_appointment</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>u_appointment_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-26 09:45:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d5009b18930b2e90863a3c9efaba10a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Appointments</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_app_module_d5009b18930b2e90863a3c9efaba10a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-26 09:45:41</sys_updated_on>
+        <timeline_page/>
+        <title>Appointments</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</application>
+        <file_path/>
+        <instance_id>4f2a6c99fbe86a581feef633beefdc0f</instance_id>
+        <instance_name>dev311363</instance_name>
+        <name>sys_app_module_d5009b18930b2e90863a3c9efaba10a1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Appointment">6e7cf2d893ee2610863a3c9efaba1043</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Appointments</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>u_appointment</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles>u_appointment_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-26 09:45:41</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>d5009b18930b2e90863a3c9efaba10a1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Appointments</sys_name><sys_overrides/><sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package><sys_policy/><sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope><sys_update_name>sys_app_module_d5009b18930b2e90863a3c9efaba10a1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-26 09:45:41</sys_updated_on><timeline_page/><title>Appointments</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>607606172</payload_hash>
+        <record_name>Appointments</record_name>
+        <reverted_from/>
+        <source>7067aa1093ae2610863a3c9efaba10ba</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-26 09:45:41</sys_created_on>
+        <sys_id>d1009b18930b2e90863a3c9efaba10a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198461fbb7a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-26 09:45:41</sys_updated_on>
+        <type>Module</type>
+        <update_guid>d5009b18fe0b2e9093c4f9a831c26da3</update_guid>
+        <update_guid_history>d5009b18fe0b2e9093c4f9a831c26da3:607606172</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Appointments">9e80d758930b2e90863a3c9efaba10ed</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-26 09:47:56</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>5c267f086e4b4f3ab07cac6a2e867624</sys_id>
+        <sys_metadata>d5009b18930b2e90863a3c9efaba10a1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Appointments</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_scope_delete display_value="">1a9e9d134e794dd889d12b6243941a40</sys_scope_delete>
+        <sys_update_name>sys_app_module_d5009b18930b2e90863a3c9efaba10a1</sys_update_name>
+        <sys_update_version display_value="sys_app_module_d5009b18930b2e90863a3c9efaba10a1">d1009b18930b2e90863a3c9efaba10a4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-26 09:47:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

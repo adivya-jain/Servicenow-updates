@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name>sysverb_update</action_name>
+        <action_name/>
         <active>true</active>
         <client>false</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
@@ -56,7 +56,7 @@ if (typeof window === 'undefined') {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7451805a93ba6290863a3c9efaba10fe</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Mera Update</sys_name>
         <sys_overrides/>
         <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
@@ -64,7 +64,7 @@ if (typeof window === 'undefined') {
         <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
         <sys_update_name>sys_ui_action_7451805a93ba6290863a3c9efaba10fe</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-19 14:01:01</sys_updated_on>
+        <sys_updated_on>2025-07-23 19:44:21</sys_updated_on>
         <table>u_insurance</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
