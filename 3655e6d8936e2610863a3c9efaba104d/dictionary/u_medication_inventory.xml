@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="ref_auto_completer=AJAXTableCompleter,&#13;&#10;ref_ac_columns=u_medication_name,&#13;&#10;ref_ac_columns_search=true" db_object_id="211ec78d93c3e210863a3c9efaba1044" label="Medication Inventory" max_length="40" name="u_medication_inventory" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="u_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Medication Name" max_length="40" name="u_medication_name" type="string"/>
+        <element label="isAvailable" max_length="40" name="u_isavailable" type="boolean"/>
+    </element>
+</database>

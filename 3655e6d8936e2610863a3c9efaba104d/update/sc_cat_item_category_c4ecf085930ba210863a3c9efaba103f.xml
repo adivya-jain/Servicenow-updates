@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Flower1">babc3085930ba210863a3c9efaba102b</sc_cat_item>
+        <sc_category display_value="All Season Flowers">b4a2384993c7a210863a3c9efaba108a</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-28 06:58:14</sys_created_on>
+        <sys_id>c4ecf085930ba210863a3c9efaba103f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>All Season Flowers.Flower1</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sc_cat_item_category_c4ecf085930ba210863a3c9efaba103f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-28 06:58:14</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>
