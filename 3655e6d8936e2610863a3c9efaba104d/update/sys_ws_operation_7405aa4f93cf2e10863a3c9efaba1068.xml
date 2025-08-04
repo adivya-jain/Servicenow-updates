@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Create Patient</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var requestBody = request.body.data;
+	var patient = new GlideRecord('u_patient_record')
+
+    patient.initialize();
+    patient.u_first_name = requestBody.first_name;
+    patient.u_last_name = requestBody.last_name;
+    patient.u_dob = requestBody.dob;
+    patient.u_contact_number = requestBody.contact_number;
+
+    var patientSysId = patient.insert();
+    if (patientSysId) {
+        response.setStatus(201);
+        return {
+            status: "success",
+            message: "Patient record created successfully",
+            sys_id: patientSysId
+        };
+    } else {
+        response.setStatus(500);
+        return {
+            status: "error",
+            message: "Failed to create patient record"
+        };
+    }
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/1790146/create_patient/create</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/create</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 19:44:25</sys_created_on>
+        <sys_id>7405aa4f93cf2e10863a3c9efaba1068</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Create Patient</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_ws_operation_7405aa4f93cf2e10863a3c9efaba1068</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 05:20:22</sys_updated_on>
+        <web_service_definition display_value="Create Patient API">eb84ee0f93cf2e10863a3c9efaba10ef</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>7405aa4f93cf2e10863a3c9efaba1068</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 19:44:24</sys_created_on>
+        <sys_id>e5c5e28f93cf2e10863a3c9efaba10d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 19:44:24</sys_updated_on>
+        <table>sys_ws_operation</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

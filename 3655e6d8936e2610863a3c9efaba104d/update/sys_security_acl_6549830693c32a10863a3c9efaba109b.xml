@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to table="u_lab_test.u_status">u_test_type=blood test^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </applies_to>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow write for u_status in u_lab_test if the record matches the criteria (u_test_type=blood test^EQ), if the ACL script returns true.</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>u_lab_test.u_status</name>
+        <operation display_value="write">write</operation>
+        <script><![CDATA[gs.hasRole('lab_technician');]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 19:46:45</sys_created_on>
+        <sys_id>6549830693c32a10863a3c9efaba109b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>u_lab_test.u_status</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_security_acl_6549830693c32a10863a3c9efaba109b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-01 10:46:52</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>6549830693c32a10863a3c9efaba109b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 19:46:42</sys_created_on>
+        <sys_id>ce89c30693c32a10863a3c9efaba105b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 19:46:42</sys_updated_on>
+        <table>sys_security_acl</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

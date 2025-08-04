@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 19:02:38</sys_created_on>
+        <sys_id>515f768693832a10863a3c9efaba10ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.patients</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_security_acl display_value="u_patient_record">2b3f368693832a10863a3c9efaba106d</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_515f768693832a10863a3c9efaba10ea</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 19:02:38</sys_updated_on>
+        <sys_user_role display_value="patients" name="patients">f423f68693432a10863a3c9efaba1000</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

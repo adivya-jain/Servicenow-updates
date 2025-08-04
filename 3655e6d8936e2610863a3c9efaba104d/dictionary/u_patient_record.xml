@@ -3,11 +3,13 @@
         <element label="Active" max_length="40" name="u_active" type="boolean"/>
         <element label="VIP" max_length="40" name="u_vip" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="Information" max_length="40" name="u_information" type="string"/>
+        <element attributes="encode_utf8=false" label="user" max_length="32" name="u_user" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="SSN" max_length="40" name="u_ssn" type="string"/>
         <element label="Emergency Contact" max_length="255" name="u_emergency_contact" type="phone_number_e164"/>
         <element attributes="edge_encryption_enabled=true" label="Last Name" mandatory="true" max_length="40" name="u_last_name" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Email" mandatory="true" max_length="40" name="u_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Email" max_length="40" name="u_email" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Internal Notes" max_length="4000" name="u_internal_notes" type="journal"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" label="Gender" mandatory="true" max_length="40" name="u_gender" type="string">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Gender" max_length="40" name="u_gender" type="string">
             <choice>
                 <element inactive_on_update="false" label="Male" sequence="1" value="male"/>
                 <element inactive_on_update="false" label="Female" sequence="0" value="female"/>
@@ -31,6 +33,9 @@
         <element attributes="edge_encryption_enabled=true" label="DOB" mandatory="true" max_length="40" name="u_dob" type="glide_date"/>
         <index name="index">
             <element name="u_allot_room"/>
+        </index>
+        <index name="index2">
+            <element name="u_user"/>
         </index>
     </element>
 </database>

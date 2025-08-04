@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>false</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description/>
+        <local_or_existing>Local</local_or_existing>
+        <name>u_doctor.*</name>
+        <operation display_value="read">read</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 17:06:49</sys_created_on>
+        <sys_id>20c4e2c293032a10863a3c9efaba1024</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>u_doctor.*</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_update_name>sys_security_acl_20c4e2c293032a10863a3c9efaba1024</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 17:10:01</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</application>
+        <file_path/>
+        <instance_id>4f2a6c99fbe86a581feef633beefdc0f</instance_id>
+        <instance_name>dev311363</instance_name>
+        <name>sys_security_acl_20c4e2c293032a10863a3c9efaba1024</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>false</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><controlled_by_refs/><decision_type>allow</decision_type><description/><local_or_existing>Local</local_or_existing><name>u_doctor.*</name><operation display_value="read">read</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-07-31 17:06:49</sys_created_on><sys_id>20c4e2c293032a10863a3c9efaba1024</sys_id><sys_mod_count>1</sys_mod_count><sys_name>u_doctor.*</sys_name><sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package><sys_policy/><sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope><sys_update_name>sys_security_acl_20c4e2c293032a10863a3c9efaba1024</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-07-31 17:10:01</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-657542467</payload_hash>
+        <record_name>u_doctor.*</record_name>
+        <reverted_from/>
+        <source>7067aa1093ae2610863a3c9efaba10ba</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 17:10:01</sys_created_on>
+        <sys_id>32a566c293032a10863a3c9efaba100e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198617655a70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 17:10:01</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>b6a566c283032a10c456355cca92500d</update_guid>
+        <update_guid_history>b6a566c283032a10c456355cca92500d:-657542467,fbe422c229032a109b4a4ca0e19f24b9:650622532</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-07-31 17:17:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>ac212ee9ffb04d55b296e4390a983971</sys_id>
+        <sys_metadata>20c4e2c293032a10863a3c9efaba1024</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_doctor.*</sys_name>
+        <sys_package display_value="Healthcare Management System" source="3655e6d8936e2610863a3c9efaba104d">3655e6d8936e2610863a3c9efaba104d</sys_package>
+        <sys_parent display_value="u_doctor">a4fbaa9493ae2610863a3c9efaba10fa</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Healthcare Management System">3655e6d8936e2610863a3c9efaba104d</sys_scope>
+        <sys_scope_delete display_value="">1a9e9d134e794dd889d12b6243941a40</sys_scope_delete>
+        <sys_update_name>sys_security_acl_20c4e2c293032a10863a3c9efaba1024</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_20c4e2c293032a10863a3c9efaba1024">32a566c293032a10863a3c9efaba100e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-07-31 17:17:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
